@@ -1,0 +1,122 @@
+body{
+    background-color: #353535;
+    font-color: white;
+    text-font: Helevetica Neue;
+    text-weight: bold;
+}
+
+#menubar{
+    background-color: #DDDDDD;
+    font-color: white;
+    font-weight: bold;
+    height: 75px;
+    width: 100%;
+    text-align: center;
+    font-size: 45px;
+    place-content: center;
+    display: flex;
+}
+
+.mainmenubuttons{
+    ext-font: Helevetica Neue;
+    text-weight: bold;
+    text-align: center;
+    place-content: center;
+    horiz-align: center;
+    color: black;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    padding: 20px;
+    margin: auto;
+}
+
+#searchbar{
+    background-color: #D0FCCF;
+    ext-font: Helevetica Neue;
+    text-weight: bold;
+    font-color: black;
+    width: 35%;
+    height: 50%;
+    text-align: center;
+    font-size: 20px;
+    place-content: center;
+    margin: auto;
+}
+
+.gameboxline{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    gap: 35px;
+    flex: 1;
+    align-content: center;
+    justify-content: space-evenly;
+}
+
+.gamebox{
+    ext-font: Helevetica Neue;
+    text-weight: bold;
+    background-color: #DDDDDD;
+    color: white;
+    height: 7cm;
+    width: 10cm;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 15px;
+}
+
+.categorical_line{
+    ext-font: Helevetica Neue;
+    text-weight: bold;
+    background-color: #DDDDDD;
+    color: white;
+    height: 75px;
+    width: 70%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: auto;
+    margin-top: 1%;
+    text-align: center;
+    font-size: 45px;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center
+}
+
+.genres{
+    ext-font: Helevetica Neue;
+    text-weight: bold;
+    background-color: greenyellow;
+    color: black;
+    border-style: none;
+    height: 50%;
+    width: 17%;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: bold;
+}
+
+#image{
+    height: 7cm;
+    width: 9cm;
+}
+
+.normaltext{
+    font-size: 10px;
+    color: black;
+}
+
+.absolute{
+    position: absolute;
+}
+
+.relative{
+    position: relative;
+}
+
+
