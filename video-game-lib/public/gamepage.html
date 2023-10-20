@@ -8,7 +8,7 @@
 <body>
 
 <header id="menubar">
-    <img src="LOGO.png">
+    <img class="logo" src="LOGO.png">
 
     <div>
         <input id="searchbar" type="text" name="name"><br>
@@ -16,7 +16,17 @@
 
     <div>
         <button class="mainmenubuttons">NEWS</button>
-        <button class="mainmenubuttons">PROFILE</button>
+
+<!--        inspiration = https://www.c-sharpcorner.com/UploadFile/051e29/dropdown-list-in-php/-->
+        <button class="mainmenubuttons">
+            PROFILE
+            <select>
+                <option value="select"></option>
+                <option value="select">Account</option>
+                <option value="select">Login</option>
+            </select>
+        </button>
+
     </div>
 </header>
 
