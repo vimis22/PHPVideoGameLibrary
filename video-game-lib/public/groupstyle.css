@@ -42,6 +42,7 @@ body{
     font-size: 20px;
     place-content: center;
     margin: auto;
+    cursor: pointer;
 }
 
 .gameboxline{
@@ -68,6 +69,7 @@ body{
     justify-content: space-evenly;
     align-items: center;
     font-size: 15px;
+    cursor: pointer;
 }
 
 .categorical_line{
@@ -99,6 +101,7 @@ body{
     margin-left: auto;
     margin-right: auto;
     font-weight: bold;
+    cursor: pointer;
 }
 
 #image{
@@ -117,6 +120,16 @@ body{
 
 .relative{
     position: relative;
+}
+
+.gameframe{
+    height: 550px;
+    width: 750px;
+    background-color: darkgrey;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 1%;
+    margin-bottom: auto;
 }
 
 
