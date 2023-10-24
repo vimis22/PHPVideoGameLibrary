@@ -7,28 +7,24 @@
 </head>
 <body>
 
-<header id="menubar">
-    <img class="logo" src="LOGO.png">
-
-    <div>
-        <input id="searchbar" type="text" name="name"><br>
+<nav>
+    <div class="menubar">
+        <div class="logo_placemenet">
+            <img id=logo src="LOGO.png">
+        </div>
+        <div class="search_placement">
+            <input id="searchbar" type="text" name="name"><br>
+        </div>
+        <div class="profile_placement">
+            <button class="profile">
+                NEWS
+            </button>
+            <button class="profile">
+                PROFILE
+            </button>
+        </div>
     </div>
-
-    <div>
-        <button class="mainmenubuttons">NEWS</button>
-
-<!--        inspiration = https://www.c-sharpcorner.com/UploadFile/051e29/dropdown-list-in-php/-->
-        <button class="mainmenubuttons">
-            PROFILE
-            <select>
-                <option value="select"></option>
-                <option value="select">Account</option>
-                <option value="select">Login</option>
-            </select>
-        </button>
-
-    </div>
-</header>
+</nav>
 
 <nav class="categorical_line">
     <button onclick="window.location.href='strategy.html'" class="genres">
