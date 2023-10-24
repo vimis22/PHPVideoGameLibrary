@@ -126,7 +126,7 @@ body{
 }
 
 .genres{
-    ext-font: Helevetica Neue;
+    text-font: Helevetica Neue;
     text-weight: bold;
     background-color: greenyellow;
     color: black;
