@@ -1,7 +1,10 @@
 body{
-    background-color: #353535;
+    background-color: #212121;
     font-color: white;
-    text-font: Helevetica Neue;
+}
+
+.textstyle{
+    text-font: Helvetica Neue;
     text-weight: bold;
 }
 
@@ -47,7 +50,6 @@ body{
 
 #searchbar{
     background-color: #e3a1be;
-    ext-font: Helevetica Neue;
     text-weight: bold;
     font-color: black;
     height: 100%;
@@ -91,7 +93,6 @@ body{
 }
 
 .gamebox{
-    ext-font: Helevetica Neue;
     text-weight: bold;
     background-color: #DDDDDD;
     color: white;
@@ -108,7 +109,6 @@ body{
 }
 
 .categorical_line{
-    ext-font: Helevetica Neue;
     text-weight: bold;
     background-color: #DDDDDD;
     color: white;
@@ -126,7 +126,6 @@ body{
 }
 
 .genres{
-    text-font: Helevetica Neue;
     text-weight: bold;
     background-color: greenyellow;
     color: black;
