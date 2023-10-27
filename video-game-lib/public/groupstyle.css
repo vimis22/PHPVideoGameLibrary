@@ -19,18 +19,12 @@ body{
     height: 75px;
     width: 100%;
     min-width: 720px;
-    align-items: center;
-    display: flex;
-    flex-direction: row;
     justify-content: space-evenly;
 }
 
 .logo_placemenet{
     height: 100%;
     width: 25%;
-    align-items: center;
-    display: flex;
-    flex-direction: row;
     justify-content: left;
 }
 
@@ -42,9 +36,6 @@ body{
 .search_placement{
     height: 50%;
     width: 50%;
-    align-items: center;
-    display: flex;
-    flex-direction: row;
     justify-content: center;
 }
 
@@ -63,9 +54,6 @@ body{
 .profile_placement{
     height: 75%;
     width: 25%;
-    align-items: center;
-    display: flex;
-    flex-direction: row;
     justify-content: center;
 }
 
@@ -74,96 +62,68 @@ body{
     border-style: none;
     height: 100%;
     width: 30%;
-    align-items: center;
     justify-content: center;
-    display: flex;
-    flex-direction: row;
     margin-right: 15px;
     cursor: pointer;
 }
 
-.gameboxline{
-    margin-top: 50px;
-    display: flex;
-    flex-direction: row;
-    gap: 35px;
-    flex: 1;
-    align-content: center;
+.category_placement{
+    margin-top: 30px;
+    justify-content: center;
+}
+
+.category{
+    background-color: #DDDDDD;
+    color: black;
+    height: 55px;
+    width: 75%;
     justify-content: space-evenly;
+}
+
+.category_buttons{
+    background-color: #7dff89;
+    border-style: none;
+    color: black;
+    font-weight: bold;
+    height: 75%;
+    width: 150px;
+}
+
+.gamebox-placement{
+    margin-top: 30px;
+    justify-content: center;
 }
 
 .gamebox{
-    text-weight: bold;
-    background-color: #DDDDDD;
-    color: white;
-    height: 7cm;
-    width: 10cm;
-    margin-right: auto;
-    margin-left: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    font-size: 15px;
-    cursor: pointer;
-}
-
-.categorical_line{
-    text-weight: bold;
-    background-color: #DDDDDD;
-    color: white;
-    height: 75px;
-    width: 70%;
-    margin-right: auto;
-    margin-left: auto;
-    margin-bottom: auto;
-    margin-top: 1%;
-    text-align: center;
-    font-size: 45px;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center
-}
-
-.genres{
-    text-weight: bold;
-    background-color: greenyellow;
-    color: black;
+    background-color: darkmagenta;
     border-style: none;
-    height: 50%;
-    width: 17%;
-    margin-left: auto;
-    margin-right: auto;
+    color: white;
     font-weight: bold;
-    cursor: pointer;
+    height: 300px;
+    width: 300px;
 }
 
-#image{
-    height: 7cm;
-    width: 9cm;
+.gamebox_links{
+    height: inherit;
+    width: inherit;
 }
 
-.normaltext{
-    font-size: 10px;
-    color: black;
+.game_image{
+    margin-top: 7%;
+    height: 75%;
+    width: 85%;
 }
 
-.absolute{
-    position: absolute;
-}
-
-.relative{
-    position: relative;
-}
-
-.gameframe{
-    height: 550px;
-    width: 1100px;
-    background-color: darkgrey;
-    margin-right: auto;
-    margin-left: auto;
-    margin-top: 1%;
-    margin-bottom: auto;
+.game_name_placement{
+    height: 18%;
+    color: white;
+    justify-content: center;
 }
 
 
+.content_placement{
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+}
