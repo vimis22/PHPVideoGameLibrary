@@ -180,7 +180,7 @@ body{
     width: 75%;
 }
 
-.login_username_password{
+.login_access{
     background-color: #a1b8e3;
     text-weight: bold;
     font-color: black;
@@ -201,9 +201,12 @@ body{
 }
 
 .login_information{
-    flex-direction: row;
     height: 50px;
-    width: 400px;
+    width: 500px;
+    justify-content: cemter;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 .things_placement{
@@ -238,4 +241,20 @@ body{
     font-weight: bold;
     height: 40px;
     width: 150px;
+}
+
+.login_label_layout{
+    height: inherit;
+    width: 30%;
+    align-items: center;
+    text-align: center;
+    display: flex;
+}
+
+.login_access_layout{
+    height: inherit;
+    width: 5%;
+    align-items: center;
+    text-align: center;
+    display: flex;
 }
