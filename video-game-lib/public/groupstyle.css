@@ -49,6 +49,7 @@ body{
     font-size: 20px;
     cursor: pointer;
     justify-content: space-evenly;
+    border-radius: 25px;
 }
 
 .profile_placement{
@@ -190,6 +191,7 @@ body{
     cursor: pointer;
     justify-content: space-evenly;
     margin-top: 10px;
+    border-radius: 25px;
 }
 
 .login_label{
@@ -211,4 +213,29 @@ body{
     align-items: center;
     display: flex;
     flex-direction: column;
+}
+
+.logintext_placement1{
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.logintext_placement2{
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.login_buttons{
+    background-color: lightskyblue;
+    border-style: none;
+    color: black;
+    font-weight: bold;
+    height: 40px;
+    width: 150px;
 }
