@@ -203,7 +203,7 @@ body{
 .login_information{
     height: 50px;
     width: 500px;
-    justify-content: cemter;
+    justify-content: center;
     display: flex;
     flex-direction: row;
     align-items: center;
