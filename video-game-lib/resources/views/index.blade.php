@@ -64,12 +64,11 @@
     array(5, "image5","example.img",7,"bullshit"),
     array(6, "image6","example.img",8,"bullshit")
     );
-    ?>
 
-    @foreach($gamebox_content as $game){
+    foreach($gamebox_content as $game){ ?>
         <a href="gamepage.blade.php?gamename=<?=$game[1]?>" >
         <img src="<?=$game[1]?>" >
-    @endforeach}
+    <?php } ?>
 
     <div class="gamebox content_placement">
         <a href="gamepage.blade.php?gamename=slope" class="gamebox_links">
