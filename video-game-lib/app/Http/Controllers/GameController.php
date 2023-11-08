@@ -7,6 +7,6 @@ use Illuminate\Http\Request;
 class GameController extends Controller
 {
     public function showIndex() {
-        return view(games.index);
+        return view('games.index');
     }
 }
