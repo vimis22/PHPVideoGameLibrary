@@ -57,29 +57,30 @@
     //array(id,name,image.path,rating_scalar,user.name)
     <?php
     $gamebox_content = (
-    array(1, "image1","example.img",5,"bullshit"),
-    array(2, "image2","example.img",6,"bullshit"),
-    array(3, "image3","example.img",7,"bullshit"),
-    array(4, "image4","example.img",8,"bullshit"),
-    array(5, "image5","example.img",7,"bullshit"),
-    array(6, "image6","example.img",8,"bullshit")
+    array(1, "name1","EXAMPLE.png",5,"bullshit"),
+    array(2, "name2","EXAMPLE.png",6,"bullshit"),
+    array(3, "name3","EXAMPLE.png",7,"bullshit"),
+    array(4, "name4","EXAMPLE.png",8,"bullshit"),
+    array(5, "name5","EXAMPLE.png",7,"bullshit"),
+    array(6, "name6","EXAMPLE.png",8,"bullshit")
     );
 
     foreach($gamebox_content as $game){ ?>
-        <a href="gamepage.blade.php?gamename=<?=$game[1]?>" >
-        <img src="<?=$game[1]?>" >
-    <?php } ?>
+{{--        <a href="gamepage.blade.php?gamename=<?=$game[1]?>" >--}}
+{{--        <img src="<?=$game[2]?>" >--}}
 
     <div class="gamebox content_placement">
-        <a href="gamepage.blade.php?gamename=slope" class="gamebox_links">
-           <img src="EXAMPLE.png" class="game_image">
+        <a href="gamepage.blade.php?gamename=<?=$game[1]?>" class="gamebox_links">
+            <img src="<?=$game[2]?>" class="game_image">
             <div class="game_name_placement content_placement">
-             <p>
-                 NAME OF THE GAME
-             </p>
+                <p>
+                        <?=$game[1]?>
+                </p>
             </div>
         </a>
     </div>
+
+    <?php } ?>
 </section>
 
 </body>
