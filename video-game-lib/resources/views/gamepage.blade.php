@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>GAMEX/gamepage</title>
-    <link rel="stylesheet" href="groupstyle.css">
+    <link rel="stylesheet" href="../css/groupstyle.css">
 </head>
 <body>
 
@@ -28,7 +28,7 @@
 
 <section>
     <div>
-        
+
     </div>
 </section>
 

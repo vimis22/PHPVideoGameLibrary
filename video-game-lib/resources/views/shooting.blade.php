@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>GAMEX/strategy</title>
-    <link rel="stylesheet" href="groupstyle.css">
+    <title>GAMEX/shooting</title>
+    <link rel="stylesheet" href="../css/groupstyle.css">
 </head>
 <body>
 

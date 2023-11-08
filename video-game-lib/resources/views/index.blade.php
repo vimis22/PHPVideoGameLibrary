@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>GAMEX/index</title>
-    <link rel="stylesheet" href="groupstyle.css">
+    <link rel="stylesheet" href="../css/groupstyle.css">
 </head>
 <body>
 
@@ -48,6 +48,12 @@
 
 <section class="gamebox-placement content_placement">
     <div class="gamebox content_placement">
+        <?php
+        $gameboxtext = {"Test1","Test2","Test3","Test4","Test5"};
+        ?>
+        @foreach ($gameboxtext as $text){
+            <p>{{$text}}</p>
+        }@endforeach
         <a href="gamepage.html" class="gamebox_links">
            <img src="EXAMPLE.png" class="game_image">
             <div class="game_name_placement content_placement">
