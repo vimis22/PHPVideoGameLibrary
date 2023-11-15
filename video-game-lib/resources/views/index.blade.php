@@ -46,18 +46,54 @@
     </div>
 </nav>
 
+<!-- This needs to be linked to our database instead of the hardcoded array here -->
+<?php
+$games = [
+    (object)[
+        'name' => 'Game 1',
+        'image' => 'EXAMPLE.png',
+        'link' => 'gamepage1.html'
+    ],
+    (object)[
+        'name' => 'Game 2',
+        'image' => 'EXAMPLE.png',
+        'link' => 'gamepage2.html'
+    ],
+    (object)[
+        'name' => 'Game 3',
+        'image' => 'EXAMPLE.png',
+        'link' => 'gamepage3.html'
+    ],
+    (object)[
+        'name' => 'Game 4',
+        'image' => 'EXAMPLE.png',
+        'link' => 'gamepage4.html'
+    ],
+    (object)[
+        'name' => 'Game 5',
+        'image' => 'EXAMPLE.png',
+        'link' => 'gamepage5.html'
+    ],
+];
+?>
+
+
 <section class="gamebox-placement content_placement">
+    @foreach ($games as $game)
     <div class="gamebox content_placement">
-        <a href="gamepage.html" class="gamebox_links">
-           <img src="{{ asset('EXAMPLE.png') }}" class="game_image">
+        <a href="{{ $game->link }}" class="gamebox_links">
+        <img src="{{ asset($game->image) }}" class="game_image">
             <div class="game_name_placement content_placement">
-             <p>
-                 NAME OF THE GAME
-             </p>
+            <p>
+                {{ $game->name }}
+            </p>
             </div>
         </a>
     </div>
-</section>
+    @endforeach
+  </section>
+
+
 
 </body>
 </html>
