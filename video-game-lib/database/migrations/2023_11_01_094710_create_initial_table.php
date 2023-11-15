@@ -66,12 +66,14 @@ return new class extends Migration
         //DO NOT REMOVE THE COMMENT IN THE DOWN()-METHOD, IT CAN CREATE PROBLEMS.
         //IF THE COMMENT IS REMOVED. AND THE COMMAND IS EXECUTED IN THE TERMINAL.
         //THEN ALL TABLES WILL BE DELETED FROM THE DATABASE.
-//        Schema::dropIfExists('user');
-//        Schema::dropIfExists('games');
-//        Schema::dropIfExists('category');
-//        Schema::dropIfExists('ratings');
-//        Schema::dropIfExists('favorite_list');
-//        Schema::dropIfExists('games_list');
-//        Schema::dropIfExists('category_list');
+
+        // No, that would be it working as intended. Laravel needs support for unmigration if possible. Fixed -Mia
+        Schema::dropIfExists('user');
+        Schema::dropIfExists('games');
+        Schema::dropIfExists('category');
+        Schema::dropIfExists('ratings');
+        Schema::dropIfExists('favorite_list');
+        Schema::dropIfExists('games_list');
+        Schema::dropIfExists('category_list');
     }
 };
