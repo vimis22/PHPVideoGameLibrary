@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>GAMEX/index</title>
-    <link rel="stylesheet" href="{{ asset('groupstyle.css') }}">
+    <link rel="stylesheet" href="../css/groupstyle.css">
 </head>
 <body>
 
 <header>
     <div class="menubar content_placement">
         <div class="logo_placemenet content_placement">
-            <img id=logo src="{{ asset('LOGO.png') }}">
+            <img id=logo src="LOGO.png">
         </div>
         <div class="search_placement content_placement">
             <input id="searchbar" type="text" name="name"><br>
@@ -46,17 +46,43 @@
     </div>
 </nav>
 
+
+<!-- I do not understand this code below. I will need someone to explain it to me. -Casper -->
+{{--<?php--}}
+{{--$gameboxtext = {"Test1","Test2","Test3","Test4","Test5"};--}}
+{{--?>--}}
+{{--@foreach ($gameboxtext as $text){--}}
+{{--<p>{{$text}}</p>--}}
+{{--}@endforeach--}}
+
 <section class="gamebox-placement content_placement">
+    //array(id,name,image.path,rating_scalar,user.name)
+    <?php
+    $gamebox_content = (
+    array(1, "name1","EXAMPLE.png",5,"bullshit"),
+    array(2, "name2","EXAMPLE.png",6,"bullshit"),
+    array(3, "name3","EXAMPLE.png",7,"bullshit"),
+    array(4, "name4","EXAMPLE.png",8,"bullshit"),
+    array(5, "name5","EXAMPLE.png",7,"bullshit"),
+    array(6, "name6","EXAMPLE.png",8,"bullshit")
+    );
+
+    foreach($gamebox_content as $game){ ?>
+{{--        <a href="gamepage.blade.php?gamename=<?=$game[1]?>" >--}}
+{{--        <img src="<?=$game[2]?>" >--}}
+
     <div class="gamebox content_placement">
-        <a href="gamepage.html" class="gamebox_links">
-           <img src="{{ asset('EXAMPLE.png') }}" class="game_image">
+        <a href="gamepage.blade.php?gamename=<?=$game[1]?>" class="gamebox_links">
+            <img src="<?=$game[2]?>" class="game_image">
             <div class="game_name_placement content_placement">
-             <p>
-                 NAME OF THE GAME
-             </p>
+                <p>
+                        <?=$game[1]?>
+                </p>
             </div>
         </a>
     </div>
+
+    <?php } ?>
 </section>
 
 </body>

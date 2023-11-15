@@ -7,6 +7,22 @@ use Illuminate\Http\Request;
 class GameController extends Controller
 {
     public function showIndex() {
-        return view('games.index');
+        return view('index');
+    }
+
+    public function showStrategy() {
+        return view('games.strategy');
+    }
+
+    public function showDrivingRacing() {
+        return view('games.driving&racing');
+    }
+
+    public function showAction() {
+        return view('games.action');
+    }
+
+    public function showShooting() {
+        return view('games.shooting');
     }
 }

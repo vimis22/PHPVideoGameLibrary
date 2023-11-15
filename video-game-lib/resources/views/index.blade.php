@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>GAMEX/index</title>
-    <link rel="stylesheet" href="../css/groupstyle.css">
+    @vite(['resources/css/groupstyle.css', 'resources/js/app.js'])
 </head>
 <body>
 
 <header>
     <div class="menubar content_placement">
         <div class="logo_placemenet content_placement">
-            <img id=logo src="LOGO.png">
+            <img id=logo src="{{ asset('LOGO.png') }}">
         </div>
         <div class="search_placement content_placement">
             <input id="searchbar" type="text" name="name"><br>
@@ -28,60 +28,72 @@
 
 <nav class="category_placement content_placement">
     <div class="category widetub_bar content_placement">
-        <button class="category_buttons">
+        <button class="category_buttons" id="strategyButton" data-route="{{ route('showStrategy') }}">
             STRATEGY
         </button>
-        <button class="category_buttons">
+        <button class="category_buttons" id="drivingRacingButton" data-route="{{ route('showDrivingRacing') }}">
             DRIVING & RACING
         </button>
-        <button class="category_buttons">
+        <button class="category_buttons" id="actionButton" data-route="{{ route('showAction') }}">
             ACTION
         </button>
-        <button class="category_buttons">
+        <button class="category_buttons" id="shootingButton" data-route="{{ route('showShooting') }}">
             SHOOTING
         </button>
-        <button class="category_buttons">
+        <button class="category_buttons" id="thinkingButton">
             THINKING
         </button>
     </div>
 </nav>
 
-{{--<?php--}}
-{{--$gameboxtext = {"Test1","Test2","Test3","Test4","Test5"};--}}
-{{--?>--}}
-{{--@foreach ($gameboxtext as $text){--}}
-{{--<p>{{$text}}</p>--}}
-{{--}@endforeach--}}
+<!-- This needs to be linked to our database instead of the hardcoded array here -->
+<?php
+$games = [
+    (object)[
+        'name' => 'Game 1',
+        'image' => 'EXAMPLE.png',
+        'link' => 'gamepage1.html'
+    ],
+    (object)[
+        'name' => 'Game 2',
+        'image' => 'EXAMPLE.png',
+        'link' => 'gamepage2.html'
+    ],
+    (object)[
+        'name' => 'Game 3',
+        'image' => 'EXAMPLE.png',
+        'link' => 'gamepage3.html'
+    ],
+    (object)[
+        'name' => 'Game 4',
+        'image' => 'EXAMPLE.png',
+        'link' => 'gamepage4.html'
+    ],
+    (object)[
+        'name' => 'Game 5',
+        'image' => 'EXAMPLE.png',
+        'link' => 'gamepage5.html'
+    ],
+];
+?>
+
 
 <section class="gamebox-placement content_placement">
-    //array(id,name,image.path,rating_scalar,user.name)
-    <?php
-    $gamebox_content = (
-    array(1, "name1","EXAMPLE.png",5,"bullshit"),
-    array(2, "name2","EXAMPLE.png",6,"bullshit"),
-    array(3, "name3","EXAMPLE.png",7,"bullshit"),
-    array(4, "name4","EXAMPLE.png",8,"bullshit"),
-    array(5, "name5","EXAMPLE.png",7,"bullshit"),
-    array(6, "name6","EXAMPLE.png",8,"bullshit")
-    );
-
-    foreach($gamebox_content as $game){ ?>
-{{--        <a href="gamepage.blade.php?gamename=<?=$game[1]?>" >--}}
-{{--        <img src="<?=$game[2]?>" >--}}
-
+    @foreach ($games as $game)
     <div class="gamebox content_placement">
-        <a href="gamepage.blade.php?gamename=<?=$game[1]?>" class="gamebox_links">
-            <img src="<?=$game[2]?>" class="game_image">
+        <a href="{{ $game->link }}" class="gamebox_links">
+        <img src="{{ asset($game->image) }}" class="game_image">
             <div class="game_name_placement content_placement">
-                <p>
-                        <?=$game[1]?>
-                </p>
+            <p>
+                {{ $game->name }}
+            </p>
             </div>
         </a>
     </div>
+    @endforeach
+  </section>
 
-    <?php } ?>
-</section>
+
 
 </body>
 </html>
