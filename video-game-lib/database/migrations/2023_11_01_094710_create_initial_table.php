@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('user', function (Blueprint $table){
+        Schema::create('game_users', function (Blueprint $table){
             $table->id();
             $table->string("role");
             $table->string("password");
@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string("email");
             $table->dateTime("date");
         });
+
         Schema::create('games', function (Blueprint $table) {
             $table->id();
             $table->string("link_path");
@@ -28,32 +29,37 @@ return new class extends Migration
             $table->string("description");
             $table->dateTime("publishment");
         });
-        Schema::create('category', function (Blueprint $table) {
+
+        Schema::create('categories', function (Blueprint $table) {
             $table->id();
             $table->string("name");
         });
+
         Schema::create('ratings', function (Blueprint $table) {
             $table->id();
             //$table->integer("id")->autoIncrement()->primary();
             $table->timestamps();
             $table->string("description");
             $table->integer("scalar");
-            $table->foreign("games_id")->references("id")->on("games");
+            $table->foreignId('games_id')->constrained('games');
         });
-        Schema::create('favortie_list', function (Blueprint $table){
+
+        Schema::create('favorite_lists', function (Blueprint $table){
             $table->id();
-            $table->foreign("games_id")->references("id")->on("games");
-            $table->foreign("user_id")->references("id")->on("user");
+            $table->foreignId('games_id')->constrained('games');
+            $table->foreignId('game_user_id')->constrained('game_users');
         });
-        Schema::create('games_list', function (Blueprint $table){
+
+        Schema::create('games_lists', function (Blueprint $table){
             $table->id();
-            $table->foreign("games_id")->references("id")->on("games");
-            $table->foreign("user_id")->references("id")->on("user");
+            $table->foreignId('games_id')->constrained('games');
+            $table->foreignId('game_user_id')->constrained('game_users');
         });
-        Schema::create("category_list", function (Blueprint $table){
+
+        Schema::create("category_lists", function (Blueprint $table){
             $table->id();
-            $table->foreign("games_id")->references("id")->on("games");
-            $table->foreign("category_id")->references("id")->on("category");
+            $table->foreignId('games_id')->constrained('games');
+            $table->foreignId('category_id')->constrained('categories');
         });
 
     }
@@ -68,12 +74,12 @@ return new class extends Migration
         //THEN ALL TABLES WILL BE DELETED FROM THE DATABASE.
 
         // No, that would be it working as intended. Laravel needs support for unmigration if possible. Fixed -Mia
-        Schema::dropIfExists('user');
+        Schema::dropIfExists('game_users');
         Schema::dropIfExists('games');
-        Schema::dropIfExists('category');
+        Schema::dropIfExists('categories');
         Schema::dropIfExists('ratings');
-        Schema::dropIfExists('favorite_list');
-        Schema::dropIfExists('games_list');
-        Schema::dropIfExists('category_list');
+        Schema::dropIfExists('favorite_lists');
+        Schema::dropIfExists('games_lists');
+        Schema::dropIfExists('category_lists');
     }
 };

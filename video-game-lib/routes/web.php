@@ -18,11 +18,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-//Uncategorized
+//Startpage
 Route::get('/game/index', [GameController::class, 'showIndex'])->name('showIndex');
 
+//Signup stuff
+Route::get('/game/account', [GameController::class, 'showAccount'])->name('showAccount');
+Route::get('/game/signup', [GameController::class, 'showSignup'])->name('showSignup');
+
 //Games
-Route::get('game/strategy', [GameController::class, 'showStrategy'])->name('showStrategy');
-Route::get('game/drivingracing', [GameController::class, 'showDrivingRacing'])->name('showDrivingRacing');
-Route::get('game/action', [GameController::class, 'showAction'])->name('showAction');
-Route::get('game/shooting', [GameController::class, 'showShooting'])->name('showShooting');
+Route::get('/game/strategy', [GameController::class, 'showStrategy'])->name('showStrategy');
+Route::get('/game/drivingracing', [GameController::class, 'showDrivingRacing'])->name('showDrivingRacing');
+Route::get('/game/action', [GameController::class, 'showAction'])->name('showAction');
+Route::get('/game/shooting', [GameController::class, 'showShooting'])->name('showShooting');

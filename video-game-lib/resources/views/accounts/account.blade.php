@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>GAMEX/account</title>
-    <link rel="stylesheet" href="../css/groupstyle.css">
+    @vite(['resources/css/groupstyle.css', 'resources/js/app.js'])
 </head>
 <body>
 
 <header>
     <div class="menubar content_placement">
         <div class="logo_placemenet content_placement">
-            <img id=logo src="LOGO.png">
+            <img id=logo src="{{ asset('LOGO.png') }}">
         </div>
         <div class="search_placement content_placement">
             <input id="searchbar" type="text" name="name"><br>

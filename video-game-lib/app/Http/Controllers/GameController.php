@@ -10,6 +10,14 @@ class GameController extends Controller
         return view('index');
     }
 
+    public function showAccount() {
+        return view ('accounts.account');
+    }
+
+    public function showSignup() {
+        return view ('accounts.signup');
+    }
+
     public function showStrategy() {
         return view('games.strategy');
     }
