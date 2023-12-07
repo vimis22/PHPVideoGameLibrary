@@ -24,6 +24,7 @@ Route::get('/game/index', [GameController::class, 'showIndex'])->name('showIndex
 //Signup stuff
 Route::get('/game/account', [GameController::class, 'showAccount'])->name('showAccount');
 Route::get('/game/signup', [GameController::class, 'showSignup'])->name('showSignup');
+Route::get('/game/news', [GameController::class, 'showNews'])->name('showNews');
 
 //Games
 Route::get('/game/strategy', [GameController::class, 'showStrategy'])->name('showStrategy');

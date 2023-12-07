@@ -289,12 +289,17 @@ body{
     margin-top: 20px;
     height: 300px;
     min-width: 100px;
-    align-items: center;
+    align-items: left;
     background-color: #DDDDDD;
     text-align: left;
     font-family: "Helvetica Neue";
     flex-direction: column;
     display: flex;
+}
+
+.news-content{
+    text-align: left;
+    padding: 20px;
 }
 
 .newsindicator{

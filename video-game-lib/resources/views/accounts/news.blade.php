@@ -54,19 +54,17 @@
 
 <article>
   <div class="newscontainer content_placement">
-    <div>
+    <div class="news-content">
       <h1>THE NEW LOCH NESS 2</h1>
-    </div>
-    <div>
       <h2 class="newsindicator">LATEST NEWS</h2>
-    </div>
     <p>
       A Good News to all Lovers of Loch Ness Games Series. We have got a new version of the game, which will be deployed on this Website.
     </p>
     <p>
       Credit: Ubisoft
     </p>
-  </div>
+    </div>
+  </dic>
 </article>
 
 </body>
