@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>GAMEX/news</title>
-    <link rel="stylesheet" href="groupstyle.css">
+    @vite(['resources/css/groupstyle.css', 'resources/js/app.js'])
 </head>
 <body>
 
