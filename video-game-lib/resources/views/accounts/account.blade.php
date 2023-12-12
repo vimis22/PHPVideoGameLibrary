@@ -10,16 +10,16 @@
 <header>
     <div class="menubar content_placement">
         <div class="logo_placemenet content_placement">
-            <img id=logo src="{{ asset('LOGO.png') }}">
+            <img id=logo src="{{ asset('LOGO.png') }}" data-route="{{ route('showIndex') }}">
         </div>
         <div class="search_placement content_placement">
             <input id="searchbar" type="text" name="name"><br>
         </div>
         <div class="profile_placement content_placement">
-            <button class="profile content_placement">
+            <button class="profile content_placement" id="newsButton" data-route="{{ route('showNews') }}">
                 NEWS
             </button>
-            <button class="profile content_placement">
+            <button class="profile content_placement" id="profileButton" data-route="{{ route('showAccount') }}">
                 PROFILE
             </button>
         </div>
@@ -30,7 +30,7 @@
     <div class="category_placement content_placement textstyle textstyle">
         <div class="widetub_bar profile_textbar content_placement">
             <div class="loginbutton_left content_placement">
-                <button class="profile_buttons">
+                <button class="profile_buttons" id="backButton">
                     BACK
                 </button>
             </div>

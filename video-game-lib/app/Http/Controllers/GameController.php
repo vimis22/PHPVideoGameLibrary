@@ -37,4 +37,8 @@ class GameController extends Controller
     public function showShooting() {
         return view('games.shooting');
     }
+
+    public function showPuzzle() {
+        return view('games.puzzle');
+    }
 }

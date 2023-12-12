@@ -8,11 +8,6 @@ body{
     text-weight: bold;
 }
 
-#logo{
-    width: 10px;
-    height: 10px;
-}
-
 .menubar{
     background-color: #DDDDDD;
     color: white;
@@ -31,6 +26,7 @@ body{
 #logo{
     height: 100%;
     width: auto;
+    cursor: pointer;
 }
 
 .search_placement{
@@ -63,9 +59,19 @@ body{
     border-style: none;
     height: 100%;
     width: 30%;
+    font-weight: bold;
     justify-content: center;
     margin-right: 15px;
     cursor: pointer;
+}
+
+.profile:hover{
+    background-color: royalblue;
+}
+
+.profile:active {
+    transform: scale(0.95);
+    transition: transform 0.2s ease;
 }
 
 .category_placement{
@@ -78,10 +84,11 @@ body{
 }
 
 .widetub_bar{
-    background-color: #DDDDDD;
+    background-color: #FF5722;
     color: black;
     height: 55px;
     width: 75%;
+    border-radius: 20px;
 }
 
 .profile_textbar{
@@ -109,21 +116,40 @@ body{
 }
 
 .category_buttons{
-    background-color: #7dff89;
+    background-color: #FF5722;
     border-style: none;
-    color: black;
-    font-weight: bold;
+    color: whitesmoke;
+    font-weight: bolder;
     height: 75%;
     width: 150px;
+    border-radius: 20px;
 }
 
 .category_buttons:hover {
-    background-color: #4effa5;
+    background-color: #D84315;
 }
 
 .category_buttons:active {
     transform: scale(0.95);
     transition: transform 0.2s ease;
+}
+
+.category_selected {
+    border: 2px solid black;
+    position: relative;
+}
+
+.category_selected::after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: whitesmoke;
+    border-radius: 50%;
+    position: absolute;
+    top: calc(50% - 0.5px);
+    right: 20px;
+    margin-right: 1px;
+    transform: translateY(-50%);
 }
 
 .gamebox-placement{
