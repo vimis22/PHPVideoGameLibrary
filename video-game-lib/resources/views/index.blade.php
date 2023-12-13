@@ -32,7 +32,7 @@
             STRATEGY
         </button>
         <button class="category_buttons" id="drivingRacingButton" data-route="{{ route('showDrivingRacing') }}">
-            DRIVING & RACING
+            RACING
         </button>
         <button class="category_buttons" id="actionButton" data-route="{{ route('showAction') }}">
             ACTION

@@ -27,20 +27,20 @@
 </header>
 
 <nav>
-    <div class="category_placement content_placement textstyle textstyle">
+    <div class="category_placement content_placement">
         <div class="widetub_bar profile_textbar content_placement">
             <div class="loginbutton_left content_placement">
-                <button class="profile_buttons" id="backButton">
+                <button class="category_buttons" id="backButton">
                     BACK
                 </button>
             </div>
-            <div class="loginbutton_center content_placement textstyle">
-                <p class="login_name_placement textstyle">
+            <div class="loginbutton_center content_placement">
+                <p class="login_name_placement">
                     LOGIN
                 </p>
             </div>
             <div class="loginbutton_right content_placement">
-                <button class="profile_buttons">
+                <button class="category_buttons">
                     CREATE ACCOUNT
                 </button>
             </div>

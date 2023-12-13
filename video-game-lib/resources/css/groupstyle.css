@@ -1,11 +1,11 @@
 body{
     background-color: #212121;
-    font-color: white;
+    color: white;
 }
 
 .textstyle{
-    text-font: Helvetica Neue;
-    text-weight: bold;
+    font: Helvetica Neue;
+    font-weight: bold;
 }
 
 .menubar{
@@ -36,16 +36,16 @@ body{
 }
 
 #searchbar{
-    background-color: #e3a1be;
-    text-weight: bold;
-    font-color: black;
+    background-color: #a1b8e3;
+    color: black;
     height: 100%;
     width: 75%;
-    text-align: center;
+    text-align: left;
     font-size: 20px;
     cursor: pointer;
     justify-content: space-evenly;
     border-radius: 25px;
+    padding-left: 15px;
 }
 
 .profile_placement{
@@ -63,6 +63,7 @@ body{
     justify-content: center;
     margin-right: 15px;
     cursor: pointer;
+    border-radius: 25px;
 }
 
 .profile:hover{
@@ -200,9 +201,8 @@ body{
 }
 
 .login_name_placement{
-    font-weight: bold;
-    height: 18%;
-    color: black;
+    font-weight: bolder;
+    color: whitesmoke;
     justify-content: center;
 }
 
@@ -217,8 +217,8 @@ body{
 
 .login_access{
     background-color: #a1b8e3;
-    text-weight: bold;
-    font-color: black;
+    font-weight: bold;
+    color: black;
     height: 75%;
     width: 300px;
     text-align: center;

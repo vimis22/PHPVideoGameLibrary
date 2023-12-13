@@ -28,19 +28,19 @@
 
 <nav class="category_placement content_placement">
     <div class="category widetub_bar content_placement">
-        <button class="category_buttons">
+        <button class="category_buttons" id="strategyButton" data-route="{{ route('showStrategy') }}">
             STRATEGY
         </button>
-        <button class="category_buttons">
-            DRIVING & RACING
+        <button class="category_buttons" id="drivingRacingButton" data-route="{{ route('showDrivingRacing') }}">
+            RACING
         </button>
-        <button class="category_buttons">
+        <button class="category_buttons" id="actionButton" data-route="{{ route('showAction') }}">
             ACTION
         </button>
-        <button class="category_buttons">
+        <button class="category_buttons" id="shootingButton" data-route="{{ route('showShooting') }}">
             SHOOTING
         </button>
-        <button class="category_buttons category_selected">
+        <button class="category_buttons category_selected" id="puzzleButton" data-route="{{ route('showPuzzle') }}">
             PUZZLE
         </button>
     </div>

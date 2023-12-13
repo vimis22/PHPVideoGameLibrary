@@ -28,7 +28,7 @@ Route::get('/game/news', [GameController::class, 'showNews'])->name('showNews');
 
 //Games
 Route::get('/game/strategy', [GameController::class, 'showStrategy'])->name('showStrategy');
-Route::get('/game/drivingracing', [GameController::class, 'showDrivingRacing'])->name('showDrivingRacing');
+Route::get('/game/racing', [GameController::class, 'showDrivingRacing'])->name('showDrivingRacing');
 Route::get('/game/action', [GameController::class, 'showAction'])->name('showAction');
 Route::get('/game/shooting', [GameController::class, 'showShooting'])->name('showShooting');
 Route::get('/game/puzzle', [GameController::class, 'showPuzzle'])->name('showPuzzle');
