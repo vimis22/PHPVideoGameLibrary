@@ -6,6 +6,10 @@ use Illuminate\Http\Request;
 
 class GameController extends Controller
 {
+    public function getGames() {
+        return view('layouts.dbgames');
+    }
+
     public function showIndex() {
         return view('index');
     }
