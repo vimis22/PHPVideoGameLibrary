@@ -8,27 +8,67 @@
 <body>
 
 <header>
-    <div class="menubar">
-        <div class="logo_placemenet">
-            <img id=logo src="{{ asset('LOGO.png') }}" data-route="{{ route('showIndex') }}">
+    <div class="menubar content_placement">
+        <div class="logo_placemenet content_placement">
+            <img id=logo src="LOGO.png">
         </div>
-        <div class="search_placement">
+        <div class="search_placement content_placement">
             <input id="searchbar" type="text" name="name"><br>
         </div>
-        <div class="profile_placement">
-            <button class="profile content_placement" id="newsButton" data-route="{{ route('showNews') }}">
+        <div class="profile_placement content_placement">
+            <button class="profile content_placement">
                 NEWS
             </button>
-            <button class="profile content_placement" id="profileButton" data-route="{{ route('showAccount') }}">
+            <button class="profile content_placement">
                 PROFILE
             </button>
         </div>
     </div>
 </header>
 
-<section>
-    <div>
+<nav>
+    <div class="category_placement content_placement textstyle textstyle">
+        <div class="widetub_bar profile_textbar content_placement">
+            <div class="loginbutton_center content_placement textstyle">
+                <p class="login_name_placement textstyle">
+                    AGE OF WAR
+                </p>
+            </div>
+        </div>
+    </div>
+</nav>
 
+<section>
+    <div class="gameinfobox_placement content_placement1">
+        <div class="login_box content_placement1">
+            <img class="game_wallpaper gamewallpaper_placement" src="age_of_war.png">
+            <table class="tableinfo">
+                <tr>
+                    <th>Name</th>
+                    <th>Indsæt værdi</th>
+                </tr>
+                <tr>
+                    <th>Platform</th>
+                    <th>Indsæt værdi</th>
+                </tr>
+                <tr>
+                    <th>Publish Date</th>
+                    <th>Indsæt værdi</th>
+                </tr>
+                <tr>
+                    <th>Game Type</th>
+                    <th>Indsæt værdi</th>
+                </tr>
+                <tr>
+                    <th>Developers</th>
+                    <th>Indsæt værdi</th>
+                </tr>
+                <tr>
+                    <th>Description</th>
+                    <th>Lav en beskrivelse af spillet her</th>
+                </tr>
+            </table>
+        </div>
     </div>
 </section>
 
