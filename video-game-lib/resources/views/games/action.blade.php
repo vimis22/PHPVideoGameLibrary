@@ -6,4 +6,6 @@
 $selectedCategory = 'action';
 @endphp
 
-
+@section('content')
+    @include('layouts.dbselectedgames')
+@endsection

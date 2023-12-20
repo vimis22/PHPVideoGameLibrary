@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Schema;
 
 class CategorySeeder extends Seeder
 {
@@ -13,8 +14,13 @@ class CategorySeeder extends Seeder
      */
     public function run(): void
     {
-        //Just to empty out database to dodge duplicates. Could use insertOrIgnore, but our only unique is ID and we don't specify that in here.
-        DB::table('categories')->delete();
+        Schema::disableForeignKeyConstraints();
+
+        $this->removeRelation('category_lists');
+
+        DB::table('categories')->truncate();
+
+        Schema::enableForeignKeyConstraints();
 
         DB::table('categories')->insert([
             ['name' => 'Action'],
@@ -23,5 +29,9 @@ class CategorySeeder extends Seeder
             ['name' => 'Shooting'],
             ['name' => 'Strategy'],
         ]);
+    }
+
+    public function removeRelation($relationTable){
+        DB::table($relationTable)->where('games_id', '!=', null)->delete();
     }
 }

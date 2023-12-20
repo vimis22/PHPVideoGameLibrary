@@ -5,3 +5,7 @@
 @php
 $selectedCategory = 'puzzle';
 @endphp
+
+@section('content')
+    @include('layouts.dbselectedgames')
+@endsection

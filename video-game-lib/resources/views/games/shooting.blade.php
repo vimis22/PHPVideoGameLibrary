@@ -5,3 +5,7 @@
 @php
 $selectedCategory = 'shooting';
 @endphp
+
+@section('content')
+    @include('layouts.dbselectedgames')
+@endsection
