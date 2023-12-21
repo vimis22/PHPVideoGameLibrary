@@ -10,4 +10,9 @@ class Game extends Model
     use HasFactory;
     protected $table = 'games';
 
+    public function categories(){
+        return $this->belongsToMany(Category::class, 'category_lists');
+    }
+
+
 }

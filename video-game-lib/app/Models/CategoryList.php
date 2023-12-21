@@ -11,7 +11,7 @@ class CategoryList extends Model
     protected $table = 'category_lists';
 
     public function game(){
-        return $this->belongsTo(Game::class, 'games_id');
+        return $this->belongsTo(Game::class, 'game_id');
     }
 
     public function category() {

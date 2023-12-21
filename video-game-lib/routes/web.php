@@ -10,7 +10,7 @@ use App\Http\Controllers\UserController;
 |--------------------------------------------------------------------------
 |
 | Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
+| routes are loaded by the RouteServiceProvider and all of them will    
 | be assigned to the "web" middleware group. Make something great!
 |
 */
@@ -43,3 +43,4 @@ Route::get('/game/racing', [GameController::class, 'showDrivingRacing'])->name('
 Route::get('/game/action', [GameController::class, 'showAction'])->name('showAction');
 Route::get('/game/shooting', [GameController::class, 'showShooting'])->name('showShooting');
 Route::get('/game/puzzle', [GameController::class, 'showPuzzle'])->name('showPuzzle');
+Route::get('/game/{linkPath}', [GameController::class, 'showGamePage'])->name('showGamePage');
