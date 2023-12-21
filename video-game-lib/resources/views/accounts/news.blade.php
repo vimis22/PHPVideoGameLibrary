@@ -17,10 +17,10 @@
     </div>
     <div class="profile_placement content_placement">
       <button class="profile content_placement" id="newsButton" data-route="{{ route('showNews') }}">
-        NEWS
+        News
       </button>
       <button class="profile content_placement" id="profileButton" data-route="{{ route('showAccount') }}">
-        PROFILE
+        Profile
       </button>
     </div>
   </div>
@@ -29,19 +29,19 @@
 <nav class="category_placement content_placement">
     <div class="category widetub_bar content_placement">
         <button class="category_buttons" id="strategyButton" data-route="{{ route('showStrategy') }}">
-            STRATEGY
+            Strategy
         </button>
         <button class="category_buttons" id="drivingRacingButton" data-route="{{ route('showDrivingRacing') }}">
-            RACING
+            Racing
         </button>
         <button class="category_buttons" id="actionButton" data-route="{{ route('showAction') }}">
-            ACTION
+            Action
         </button>
         <button class="category_buttons" id="shootingButton" data-route="{{ route('showShooting') }}">
-            SHOOTING
+            Shooting
         </button>
         <button class="category_buttons" id="puzzleButton" data-route="{{ route('showPuzzle') }}">
-            PUZZLE
+            Puzzle
         </button>
     </div>
 </nav>
