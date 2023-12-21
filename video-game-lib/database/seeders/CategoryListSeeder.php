@@ -26,13 +26,13 @@ class CategoryListSeeder extends Seeder
 
              //Age of War
             [
-                'games_id' => 1,
+                'game_id' => 1,
                 'category_id' => 5,
             ],
 
             //Chaos Faction
             [
-                'games_id' => 2,
+                'game_id' => 2,
                 'category_id' => 1,
             ],
         ]);

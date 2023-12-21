@@ -3,11 +3,16 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Game;
 
 class GameController extends Controller
 {
-    public function getGames() {
-        return view('layouts.dbgames');
+    public function showGamePage($linkPath) {        
+        //The first() is to fix a query builder instance error. Without the first it's and instance of a query builder instead of the actual model instance.
+        $game = Game::where('link_path', $linkPath)->first();
+        $categories = $game->categories;
+
+        return view('games.gamepage', ['game' => $game, 'categories' => $categories]);
     }
 
     public function showIndex() {

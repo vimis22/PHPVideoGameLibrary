@@ -2,10 +2,7 @@
 
 @section('title', 'GAMEX/index')
 
-@php
-$selectedCategory = '';
-@endphp
-
 @section('content')
+    @include('layouts.categorybar')
     @include('layouts.dbgames')
 @endsection

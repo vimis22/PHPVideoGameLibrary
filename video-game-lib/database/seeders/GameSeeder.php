@@ -44,6 +44,6 @@ class GameSeeder extends Seeder
     }
 
     public function removeRelation($relationTable){
-        DB::table($relationTable)->where('games_id', '!=', null)->delete();
+        DB::table($relationTable)->where('game_id', '!=', null)->delete();
     }
 }

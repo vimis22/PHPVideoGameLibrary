@@ -23,7 +23,7 @@ return new class extends Migration
 
         Schema::create('games', function (Blueprint $table) {
             $table->id();
-            $table->string("link_path");
+            $table->string("link_path")->unique();
             $table->string("image_path");
             $table->string("name");
             $table->string("description");
@@ -41,24 +41,24 @@ return new class extends Migration
             $table->timestamps();
             $table->string("description");
             $table->integer("scalar");
-            $table->foreignId('games_id')->constrained('games');
+            $table->foreignId('game_id')->constrained('games');
         });
 
         Schema::create('favorite_lists', function (Blueprint $table){
             $table->id();
-            $table->foreignId('games_id')->constrained('games');
+            $table->foreignId('game_id')->constrained('games');
             $table->foreignId('game_user_id')->constrained('game_users');
         });
 
         Schema::create('games_lists', function (Blueprint $table){
             $table->id();
-            $table->foreignId('games_id')->constrained('games');
+            $table->foreignId('game_id')->constrained('games');
             $table->foreignId('game_user_id')->constrained('game_users');
         });
 
         Schema::create("category_lists", function (Blueprint $table){
             $table->id();
-            $table->foreignId('games_id')->constrained('games');
+            $table->foreignId('game_id')->constrained('games');
             $table->foreignId('category_id')->constrained('categories');
         });
 

@@ -9,7 +9,7 @@
     <section class="gamebox-placement content_placement">
         @foreach ($games as $game)
         <div class="gamebox content_placement">
-            <a href="{{ asset($game->link_path) }}" class="gamebox_links">
+            <a href="{{ route('showGamePage', ['linkPath' => $game->link_path]) }}" class="gamebox_links">
             <img src="{{ asset($game->image_path) }}" class="game_image">
                 <div class="game_name_placement content_placement">
                 <p>
