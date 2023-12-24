@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>GAMEX/signup</title>
-    @vite(['resources/css/groupstyle.css', 'resources/js/app.js'])
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    @vite(['resources/css/groupstyle.css', 'resources/js/app.js', 'resources/js/ajax.js'])
 </head>
 <body>
+
 
 <header>
     <div class="menubar content_placement">
@@ -55,7 +57,8 @@
                 <p>
                     Please enter your Login Information here.
                 </p>
-                <form action="{{route('user.addUser')}}" method="post">
+                <!--{\{route('user.addUser')}\}-->
+                <form method="post" id="signupForm">
                     @csrf
                     @method('post')
                     <div class="login_information">
@@ -83,7 +86,7 @@
                         </div>
                     </div>
                     <div class="logintext_placement2 content_placement">
-                        <input class="login_buttons" type="submit" name="create_account" value="Sign Up">
+                        <button class="login_buttons" id="submitbutton">Sign up</button>
                     </div>
                     <p class="logintext_placement2 content_placement">
                         Already have an account? <a href="/user/login">Head over here to Log in</a>
@@ -95,6 +98,35 @@
 </section>
 
 
+<script>
+    $('#submitbutton').click(function (e) {
+
+
+        e.preventDefault(); // Prevent it from being sent along normally.
+
+        var data = $('form').get(0);
+
+        $.ajax({
+            type: 'POST',
+            url: "{{ route('user.addUser') }}",
+            headers: {
+                'X-CSRF-Token': '{!! csrf_token() !!}' // Laravel logic that I hope works.
+            },
+            processData: false,
+            contentType: false,
+            enctype: 'multipart/form-data',
+            data: new FormData(data),
+            success: function (response) {
+                alert("User succesfully created!");
+            },
+            error: function (xhr, status, error) {
+                console.error(xhr.responseText);
+            } 
+        });
+
+    });
+
+ </script>
 
 
 </body>

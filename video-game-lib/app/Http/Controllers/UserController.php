@@ -23,10 +23,10 @@ class UserController extends Controller
 
     public function addUser(Request $request) {
 
-        // Should probably be salting this as well, but I don't think there's enough time to figure out how to do that.
         
 
         $user = User::create($request->only('email','name','password'));
+
 
 
     }
