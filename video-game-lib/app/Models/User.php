@@ -20,4 +20,9 @@ class User extends AuthenticatableUser
     protected $hidden = [
         'password',
     ];
+
+    public function isAdmin()
+    {
+        return $this->role === 'admin'; // Adjust this condition based on your user roles setup
+    }
 }

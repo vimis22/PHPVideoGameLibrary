@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('username')->unique();
             $table->string('password');
+            $table->string('role');
             $table->timestamps();
         });
 
@@ -28,18 +29,17 @@ return new class extends Migration
             $table->dateTime("date");
         });
 
-        Schema::create('games', function (Blueprint $table) {
-            $table->id();
-            $table->string("link_path")->unique();
-            $table->string("image_path");
-            $table->string("name");
-            $table->string("description");
-            $table->dateTime("publishment");
-        });
-
         Schema::create('categories', function (Blueprint $table) {
             $table->id();
             $table->string("name");
+        });
+
+        Schema::create('games', function (Blueprint $table) {
+            $table->id();
+            $table->string("name");
+            $table->string("description");
+            $table->date('publishing_date');
+            $table->string('category'); // No foreign key, storing category name directly        });
         });
 
         Schema::create('ratings', function (Blueprint $table) {

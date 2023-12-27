@@ -27,18 +27,16 @@ class GameSeeder extends Seeder
 
         DB::table('games')->insert([
             [
-                    'link_path' => 'age-of-war',
-                    'image_path' => 'gamepics/AgeofWar.jpg',
                     'name' => 'Age of War',
                     'description' => 'A classic with a certified banger theme',
-                    'publishment' => '2007-10-31'
+                    'publishing_date' => '2007-10-31',
+                    'category' => 'Strategy'
                 ],
                 [
-                    'link_path' => 'chaos-faction',
-                    'image_path' => 'gamepics/ChaosFaction.webp',
                     'name' => 'Chaos Faction',
                     'description' => 'The OG free version of Smash Brothers',
-                    'publisment' => '2007-11-27',
+                    'publishing_date' => '2007-11-27',
+                    'category' => 'Puzzle'
             ],
         ]);
     }

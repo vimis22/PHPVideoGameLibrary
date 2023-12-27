@@ -4,6 +4,6 @@
 
 @section('content')
     @include('layouts.topbar')
-    @include('layouts.categorybar')
-    @include('layouts.dbgames')
+    <hr class="text-white mx-3 my-4">
+    @include('games.index')
 @endsection

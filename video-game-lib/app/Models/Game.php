@@ -9,9 +9,13 @@ class Game extends Model
 {
     use HasFactory;
     protected $table = 'games';
+    protected $fillable = ['name', 'description', 'publishing_date', 'category'];
 
-    public function categories(){
-        return $this->belongsToMany(Category::class, 'category_lists');
+    public $timestamps = false;
+
+    public function category()
+    {
+        return $this->belongsTo(Category::class, 'category');
     }
 
 
