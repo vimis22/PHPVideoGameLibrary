@@ -11,13 +11,12 @@
         @endforeach
     </div>
 
-    <!-- Sections for each category -->
     @foreach ($categories as $category)
         <section id="{{ $category }}" class="mt-5">
-            <h2 class="text-white">Category: {{ $category }}</h2>
-            <ul class="list-unstyled">
+            <h2 class="text-white text-decoration-none">Category: {{ $category }}</h2>
+            <ul class="list-unstyled text-decoration-none">
                 @forelse ($gamesByCategory[$category] as $game)
-                    <li class="text-white">{{ $game->name }}</li>
+                    <li class="text-white"><a class="btn btn-dark text-white border-light m-1" href="{{ route('showGame', $game->id) }}">{{ $game->name }}</a></li>
                 @empty
                     <li class="text-white">No games available in this category.</li>
                 @endforelse

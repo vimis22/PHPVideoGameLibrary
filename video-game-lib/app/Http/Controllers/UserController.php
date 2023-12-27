@@ -37,10 +37,7 @@ class UserController extends Controller
 
         $user = auth()->user();
 
-
-        // Check if the provided current password matches the user's actual password
         if (Hash::check($request->input('current_password'), $user->password)) {
-            // Update the user's password
             $user->password = Hash::make($request->input('password'));
             $user->save();
 
@@ -52,17 +49,8 @@ class UserController extends Controller
     }
     public function showGames()
     {
-        $categories = Category::all();
         $games = Game::all();
-
-        // Organize games by category
-        $gamesByCategory = [];
-        foreach ($games as $game) {
-            $categoryName = $game->category;
-            $gamesByCategory[$categoryName][] = $game;
-        }
-
-        return view('admin.games.index', compact('categories', 'gamesByCategory'));
+        return view('admin.games.index', compact('games'));
     }
 
     public function showCategories()
@@ -74,7 +62,6 @@ class UserController extends Controller
     public function addGame(Request $request)
     {
         $categories = Category::pluck('name', 'id');
-        // Placeholder for validation (customize based on your needs)
         $request->validate([
             'name' => 'required|string|max:255',
             'description' => 'required|string',
@@ -82,7 +69,6 @@ class UserController extends Controller
             'category' => 'required|string',
         ]);
 
-        // Placeholder for creating a new game (customize based on your needs)
         Game::create([
             'name' => $request->input('name'),
             'description' => $request->input('description'),
@@ -103,7 +89,6 @@ class UserController extends Controller
     public function updateGame(Request $request, $id)
     {
         $categories = Category::pluck('name', 'id');
-        // Placeholder for validation (customize based on your needs)
         $request->validate([
             'name' => 'required|string|max:255',
             'description' => 'required|string',
@@ -111,7 +96,6 @@ class UserController extends Controller
             'category' => 'required|string',
         ]);
 
-        // Placeholder for updating the game (customize based on your needs)
         $game = Game::findOrFail($id);
         $game->update([
             'name' => $request->input('name'),
@@ -125,7 +109,6 @@ class UserController extends Controller
 
     public function deleteGame($id)
     {
-        // Placeholder for deleting the game (customize based on your needs)
         $game = Game::findOrFail($id);
         $game->delete();
 
@@ -134,12 +117,10 @@ class UserController extends Controller
 
     public function addCategory(Request $request)
     {
-        // Placeholder for validation (customize based on your needs)
         $request->validate([
             'name' => 'required|string|max:255',
         ]);
 
-        // Placeholder for creating a new category (customize based on your needs)
         Category::create([
             'name' => $request->input('name'),
         ]);

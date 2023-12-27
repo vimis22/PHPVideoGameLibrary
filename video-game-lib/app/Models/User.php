@@ -23,6 +23,6 @@ class User extends AuthenticatableUser
 
     public function isAdmin()
     {
-        return $this->role === 'admin'; // Adjust this condition based on your user roles setup
+        return $this->role === 'admin';
     }
 }

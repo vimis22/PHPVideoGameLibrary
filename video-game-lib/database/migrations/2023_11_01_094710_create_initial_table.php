@@ -39,7 +39,7 @@ return new class extends Migration
             $table->string("name");
             $table->string("description");
             $table->date('publishing_date');
-            $table->string('category'); // No foreign key, storing category name directly        });
+            $table->string('category');
         });
 
         Schema::create('ratings', function (Blueprint $table) {

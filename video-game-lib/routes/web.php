@@ -29,13 +29,11 @@ Route::get('/game/shooting', [GameController::class, 'showShooting'])->name('sho
 Route::get('/game/puzzle', [GameController::class, 'showPuzzle'])->name('showPuzzle');
 Route::get('/game/{linkPath}', [GameController::class, 'showGamePage'])->name('showGamePage');
 
-// Authentication routes
 Route::get('/account', [UserController::class, 'showAccount'])->name('showAccount');
 Route::post('/account/login', [UserController::class, 'login']);
 Route::post('/account/logout', [UserController::class, 'logout'])->middleware('auth');
 Route::post('/account/change-password', [UserController::class, 'changePassword'])->middleware('auth');
 
-// Admin routes
 Route::middleware(['auth', 'admin'])->group(function () {
     Route::get('/admin/games', [UserController::class, 'showGames'])->name('admin.showGames');
     Route::get('/admin/categories', [UserController::class, 'showCategories'])->name('admin.showCategories');

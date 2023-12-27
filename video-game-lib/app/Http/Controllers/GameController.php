@@ -12,7 +12,6 @@ class GameController extends Controller
     {
         $categories = Game::distinct()->pluck('category')->toArray();
 
-        // Fetch games sorted by category
         $gamesByCategory = [];
         foreach ($categories as $category) {
             $gamesByCategory[$category] = Game::where('category', $category)->orderBy('name')->get();

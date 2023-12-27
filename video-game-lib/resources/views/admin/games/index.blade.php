@@ -1,41 +1,31 @@
 @extends('layouts.master')
+@include('layouts.topbar')
 
-@section('content')
-    <h1>Admin - Games</h1>
-    <a href="{{ route('admin.showCategories') }}">Manage Categories</a>
-    <br><br>
-
-    <ul class="nav nav-tabs" id="categoryTabs" role="tablist">
-        @foreach ($categories as $category)
-            <li class="nav-item">
-                <a class="nav-link" id="tab_{{ $category->id }}" data-toggle="tab" href="#category_{{ $category->id }}" role="tab" aria-controls="category_{{ $category->id }}" aria-selected="false">
-                    {{ $category->name }}
-                </a>
-            </li>
-        @endforeach
-    </ul>
-
-    <div class="tab-content" id="categoryTabsContent">
-        @foreach ($categories as $category)
-            <div class="tab-pane fade" id="category_{{ $category->id }}" role="tabpanel" aria-labelledby="tab_{{ $category->id }}">
-                <ul>
-                    @if(isset($gamesByCategory[$category->name]))
-                        @foreach ($gamesByCategory[$category->name] as $game)
-                            <li>
-                                <a href="{{ route('admin.editGame', $game->id) }}">{{ $game->name }}</a>
-                                <form action="{{ route('admin.deleteGame', $game->id) }}" method="post">
-                                    @csrf
-                                    <button type="submit">Delete</button>
-                                </form>
-                            </li>
-                        @endforeach
-                    @else
-                        <li>No games available in this category.</li>
-                    @endif
-                </ul>
-            </div>
-        @endforeach
+<hr class="text-white mx-3 my-4">
+<div class="container text-center text-white">
+    <h1 class="text-white display-3">Edit Games and Categories</h1>
+    <div>
+        <a class="btn btn-dark text-white border-light col" href="{{ route('admin.showCategories') }}">Manage Categories</a>
+        <a class="btn btn-dark text-white border-light col"  href="{{ route('admin.addGame') }}">Add New Game</a>
     </div>
 
-    <a href="{{ route('admin.addGame') }}">Add New Game</a>
-@endsection
+    <br><br>
+    @foreach ($games as $game)
+        <div class="row mt-2 mb-2">
+            <h2 class="col text-white">{{ $game->name }}</h2>
+            <a class="col btn btn-dark text-white border-light" href="{{ route('admin.editGame', $game->id) }}">Edit</a>
+            <form class="col" action="{{ route('admin.deleteGame', $game->id) }}" method="post">
+                @csrf
+                <button class="col btn btn-dark text-white border-light" type="submit">Delete</button>
+            </form>
+        </div>
+        <hr class="text-white mx-3 my-4">
+    @endforeach
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            @if(session('success'))
+            alert("{{ session('success') }}");
+            @endif
+        });
+    </script>
+</div>

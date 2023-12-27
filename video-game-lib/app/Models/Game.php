@@ -18,5 +18,10 @@ class Game extends Model
         return $this->belongsTo(Category::class, 'category');
     }
 
+    public function isAdmin()
+    {
+        return Auth::check() && Auth::user()->isAdmin();
+    }
+
 
 }
