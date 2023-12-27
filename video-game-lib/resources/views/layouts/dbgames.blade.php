@@ -1,10 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>GAMEX/DB</title>
-    @vite(['resources/css/groupstyle.css', 'resources/js/app.js'])
-</head>
 <body>
     <section class="gamebox-placement content_placement">
         @foreach ($games as $game)
@@ -21,4 +14,3 @@
         @endforeach
     </section>
 </body>
-</html>
