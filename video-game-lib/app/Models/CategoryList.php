@@ -11,11 +11,11 @@ class CategoryList extends Model
     protected $table = 'category_lists';
 
     public function game(){
-        return $this->belongsTo(Game::class, 'games_id');
+        return $this->belongsTo(Game::class, 'game');
     }
 
     public function category() {
-        return $this->belongsTo(Category::class, 'category_id');
+        return $this->belongsTo(Category::class, 'category');
     }
 
 }

@@ -2,10 +2,8 @@
 
 @section('title', 'GAMEX/index')
 
-@php
-$selectedCategory = '';
-@endphp
-
 @section('content')
-    @include('layouts.dbgames')
+    @include('layouts.topbar')
+    <hr class="text-white mx-3 my-4">
+    @include('games.index')
 @endsection

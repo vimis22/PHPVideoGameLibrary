@@ -2,21 +2,30 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use Illuminate\Http\Request;
+use App\Models\Game;
 
 class GameController extends Controller
 {
-    public function getGames() {
-        return view('layouts.dbgames');
+    public function showIndex()
+    {
+        $categories = Game::distinct()->pluck('category')->toArray();
+
+        $gamesByCategory = [];
+        foreach ($categories as $category) {
+            $gamesByCategory[$category] = Game::where('category', $category)->orderBy('name')->get();
+        }
+
+        return view('index', compact('categories', 'gamesByCategory'));
     }
 
-    public function showIndex() {
-        return view('index');
+    public function showGame($id)
+    {
+        $game = Game::findOrFail($id);
+        return view('games.show', compact('game'));
     }
 
-    public function showAccount() {
-        return view ('accounts.account');
-    }
 
     public function showSignup() {
         return view ('accounts.signup');
@@ -45,4 +54,5 @@ class GameController extends Controller
     public function showPuzzle() {
         return view('games.puzzle');
     }
+
 }
