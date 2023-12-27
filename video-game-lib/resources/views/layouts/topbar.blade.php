@@ -19,6 +19,9 @@
                     <a href={{ route('admin.showGames') }} class="btn btn-outline-light" type="button">
                     EDIT GAMES AND CATEGORIES
                     </a>
+                <a href="{{ route('showAccount') }}" class="btn btn-outline-light" type="button">
+                    LANGUAGE
+                </a>
                 @endcan
             </div>
         </div>
