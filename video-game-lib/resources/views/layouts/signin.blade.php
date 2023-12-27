@@ -1,5 +1,3 @@
-<body>
-
 <div class="d-flex align-items-center justify-content-center m-5">
     <h2 class="text-center text-white m-4">
         Log in to GAMEX
@@ -76,5 +74,4 @@
     </div>
 </section>
 
-</body>
 

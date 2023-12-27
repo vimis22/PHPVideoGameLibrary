@@ -1,16 +1,14 @@
-<body>
-    <section class="gamebox-placement content_placement">
-        @foreach ($games as $game)
-        <div class="gamebox content_placement">
-            <a href="{{ route('showGamePage', ['linkPath' => $game->link_path]) }}" class="gamebox_links">
-            <img src="{{ asset($game->image_path) }}" class="game_image">
-                <div class="game_name_placement content_placement">
-                <p>
-                    {{ $game->name }}
-                </p>
-                </div>
-            </a>
-        </div>
-        @endforeach
-    </section>
-</body>
+<section class="gamebox-placement content_placement">
+    @foreach ($games as $game)
+    <div class="gamebox content_placement">
+        <a href="{{ route('showGamePage', ['linkPath' => $game->link_path]) }}" class="gamebox_links">
+        <img src="{{ asset($game->image_path) }}" class="game_image">
+            <div class="game_name_placement content_placement">
+            <p>
+                {{ $game->name }}
+            </p>
+            </div>
+        </a>
+    </div>
+    @endforeach
+</section>
