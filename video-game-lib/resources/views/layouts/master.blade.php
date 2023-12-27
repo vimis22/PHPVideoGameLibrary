@@ -4,31 +4,12 @@
     <meta charset="UTF-8">
     <title>@yield('title')</title>
     @vite(['resources/css/groupstyle.css', 'resources/js/app.js'])
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
-<body>
 
-<header>
-    <div class="menubar content_placement">
-        <div class="logo_placemenet content_placement">
-            <img id=logo src="{{ asset('LOGO.png') }}" data-route="{{ route('showIndex') }}">
-        </div>
-        <div class="search_placement content_placement">
-            <input id="searchbar" type="text" name="name"><br>
-        </div>
-        <div class="profile_placement content_placement">
-            <button class="profile content_placement" id="newsButton" data-route="{{ route('showNews') }}">
-                NEWS
-            </button>
-            <button class="profile content_placement" id="profileButton" data-route="{{ route('showAccount') }}">
-                PROFILE
-            </button>
-        </div>
-    </div>
-</header>
+<body class="bg-dark">
 
-<main>
-    @yield('content')
-</main>
+@yield('content')
 
 </body>
 </html>

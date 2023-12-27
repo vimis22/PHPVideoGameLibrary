@@ -7,6 +7,7 @@ $selectedCategory = 'puzzle';
 @endphp
 
 @section('content')
+    @include('layouts.topbar')
     @include('layouts.categorybar')
     @include('layouts.dbselectedgames')
 @endsection
