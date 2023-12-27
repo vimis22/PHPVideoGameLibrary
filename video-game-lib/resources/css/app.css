@@ -258,3 +258,72 @@ body{
     text-align: center;
     display: flex;
 }
+
+.mainnewscontainer{
+    margin-top: 20px;
+    height: 50px;
+    min-width: 100px;
+    align-items: center;
+    text-align: center;
+    background-color: #DDDDDD;
+    justify-content: center;
+}
+
+.mainnewstitle{
+    font-family: "Helvetica Neue";
+    color: black;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.newscontainer{
+    margin-top: 20px;
+    height: 300px;
+    min-width: 100px;
+    align-items: center;
+    background-color: #DDDDDD;
+    text-align: left;
+    font-family: "Helvetica Neue";
+    flex-direction: column;
+    display: flex;
+}
+
+.newsindicator{
+    font-size: 22px;
+    height: 50px;
+    width: 100px;
+    background-color: #FFE600;
+    font-family: "Helvetica Neue";
+    text-align: left;
+}
+
+.newstext{
+    font-size: 18px;
+    font-family: "Helvetica Neue";
+    font-weight: bold;
+    text-align: left;
+}
+
+.gameinfobox_placement{
+    margin-top: 30px;
+    justify-content: space-evenly;
+}
+
+.content_placement1{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.game_wallpaper{
+    margin-top: 10px;
+    margin-left: 10px;
+    height: 400px;
+    width: 300px;
+    justify-content: left;
+}
+
+.tableinfo{
+    justify-content: space-evenly;
+    place-content: right;
+}
