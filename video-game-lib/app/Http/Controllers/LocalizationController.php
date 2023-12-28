@@ -3,6 +3,32 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Session;
+switch(Session::get("locale")){
+
+    case "en":
+    Session::put("locale","en"));
+    App::setLocale(Session::get("locale"));
+    break;
+
+    case "dk":
+    Session::put("locale","dk"));
+    App::setLocale(Session::get("locale"));
+    break;
+
+    case "de":
+    Session::put("locale","de"));
+    App::setLocale(Session::get("locale"));
+    break;
+
+    default:
+    Session::put("locale","en"));
+    App::setLocale(Session::get("locale"));
+    break;
+}
+
+
+$sprog=array("name"=>"peter","age"=>"41","country"=>"usa");
+print_r(array_values($sprog));
 
 <!--The controller class is where we are able to authrorize the incoming and outcoming requests, whenever a ActionEvent has happened.
 The LocalizationController has been created so that whenever a request occurs for changing language, then we are able to validate that request and process it through this method

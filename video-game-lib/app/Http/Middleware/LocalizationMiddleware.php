@@ -31,6 +31,11 @@ class LocalizationMiddleware
                 Session::put("locale","de"));
                 App::setLocale(Session::get("locale"));
                 break;
+
+                default:
+                Session::put("locale","en"));
+                App::setLocale(Session::get("locale"));
+                break;
             }
         }
         return $next($request);
