@@ -19,11 +19,14 @@
                     <a href={{ route('admin.showGames') }} class="btn btn-outline-light" type="button">
                     EDIT GAMES AND CATEGORIES
                     </a>
-                <a href="{{ route('showAccount') }}" class="btn btn-outline-light" type="button">
-                    LANGUAGE
-                </a>
+                <select id="languageselection" name="LANGUAGE" class="profile content_placement">
+                    <option value="DANSK" href="locale/dk">DANSK</option>
+                    <option value="ENGLISH" href="locale/en">ENGLISH</option>
+                    <option value="DEUTSCH" href="locale/de">DEUTSCH</option>
+                </select>
                 @endcan
             </div>
         </div>
     </div>
 </div>
+
