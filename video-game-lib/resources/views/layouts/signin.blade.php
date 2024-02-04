@@ -11,30 +11,30 @@
     <div class="category_placement content_placement textstyle">
         <div class="search_placement login_box content_placement textstyle">
             <div class="logintext_placement1 textstyle">
-                <p class="">
+                <p class="themeText">
                     Please enter your Login Information here.
                 </p>
             @if(auth()->check())
-                <p>Logged in</p>
+                <p class="themeText">Logged in</p>
             @else
-                <p>Logged out</p>
+                <p class="themeText">Logged out</p>
             @endif
 
             <form method="post" action="/account/login">
                 @csrf
-                <input type="text" name="username" placeholder="Username" required>
-                <input type="password" name="password" placeholder="Password" required>
-                <button type="submit">Login</button>
+                <input class="themeText" type="text" name="username" placeholder="Username" required>
+                <input class="themeText" type="password" name="password" placeholder="Password" required>
+                <button class="themeText" type="submit">Login</button>
             </form>
 
             @if(auth()->check())
-                <p>Logged in</p>
+                <p class="themeText">Logged in</p>
                 <form method="post" action="/account/logout">
                     @csrf
-                    <button type="submit">Logout</button>
+                    <button class="themeText" type="submit">Logout</button>
                 </form>
             @else
-                <p>Logged out</p>
+                <p class="themeText">Logged out</p>
             @endif
 
             @if ($errors->has('login'))
@@ -63,10 +63,10 @@
 
                 <form method="post" action="{{ url('/account/change-password') }}">
                     @csrf
-                    <input type="password" name="current_password" placeholder="Current Password" required>
-                    <input type="password" name="password" placeholder="New Password" required>
-                    <input type="password" name="password_confirmation" placeholder="Confirm New Password" required>
-                    <button type="submit">Change Password</button>
+                    <input class="themeText" type="password" name="current_password" placeholder="Current Password" required>
+                    <input class="themeText" type="password" name="password" placeholder="New Password" required>
+                    <input class="themeText" type="password" name="password_confirmation" placeholder="Confirm New Password" required>
+                    <button class="themeText" type="submit">Change Password</button>
                 </form>
             @endif
 

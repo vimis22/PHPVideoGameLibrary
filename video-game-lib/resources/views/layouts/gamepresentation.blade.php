@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>GAMEX/DB</title>
     @vite(['resources/css/groupstyle.css', 'resources/js/app.js'])
+    <script src="{{ asset('resources/js/themescript.js')}}"></script>
 </head>
 <body>
 <nav>
@@ -24,18 +25,18 @@
       <img class="game_wallpaper gamewallpaper_placement" src='{{ asset($game->image_path) }}'>
         <table class="tableinfo">
           <tr>
-            <th>Publish Date</th>
-            <th>{{ $game->publishment }}</th>
+            <th class="themeText">Publish Date</th>
+            <th class="themeText">{{ $game->publishment }}</th>
           </tr>
           <tr>
-            <th>Genre</th>
+            <th class="themeText">Genre</th>
             @foreach ($categories as $category)
-                <th>{{ $category->name }}</th>
+                <th class="themeText">{{ $category->name }}</th>
             @endforeach
           </tr>
           <tr>
-            <th>Description</th>
-            <th>{{ $game->description }}</th>
+            <th class="themeText">Description</th>
+            <th class="themeText">{{ $game->description }}</th>
           </tr>
         </table>
     </div>
@@ -43,4 +44,4 @@
 </section>
 
 </body>
-</html> 
+</html>

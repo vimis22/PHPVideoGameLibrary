@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ThemeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\GameController;
 use App\Http\Controllers\UserController;
@@ -18,6 +19,8 @@ use App\Http\Controllers\UserController;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/theme', [ThemeController::class, 'showTheme'])->name('showTheme');
 
 Route::get('/', [GameController::class, 'showIndex'])->name('showIndex');
 Route::get('/games/{id}', [GameController::class, 'showGame'])->name('showGame');

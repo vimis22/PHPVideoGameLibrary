@@ -8,9 +8,9 @@
 <body>
     <section class="gamebox-placement content_placement">
         @foreach ($games as $game)
-        <div class="gamebox content_placement">
+        <div class="themeBack gamebox content_placement">
             <img src="{{ asset($game->image_path) }}" class="game_image">
-                <div class="game_name_placement content_placement">
+                <div class="themeText game_name_placement content_placement">
                 <p>
                     {{ $game->name }}
                 </p>
