@@ -48,7 +48,7 @@ implement_ThemeSelector();
 
 // //Det nederste herfra er fra ChatGPT.
 // const backgroundpicker = document.getElementById("backgroundpicker");
-// const textpicker = document.getElementById("textpicker")
+// const textpicker = document.getElementById("textpicker");
 // colorpicker.addEventListener("input",function(){
 //     activateTheme(backgroundpicker.value);
 //     activateTheme(textpicker.value);

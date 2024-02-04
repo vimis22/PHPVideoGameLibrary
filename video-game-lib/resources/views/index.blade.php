@@ -6,5 +6,4 @@
     @include('layouts.topbar')
     <hr class="text-white mx-3 my-4">
     @include('games.index')
-    @include('themescript')
 @endsection

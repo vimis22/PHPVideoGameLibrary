@@ -7,9 +7,9 @@
 
 <section>
     <div class="colorbox_placement">
-        <p class="introduction">Please choose a background color:</p>
+        <p class="introduction themeText">Please choose a background color:</p>
         <input type="color" class="colorbox" id="backgroundpicker" value="#ffffff">
-        <p class="introduction">Please choose a text color:</p>
+        <p class="introduction themeText">Please choose a text color:</p>
         <input type="color" class="colorbox" id="textpicker" value="#000000">
         <button class="themebutton">Change Theme Color</button>
     </div>
