@@ -1,8 +1,4 @@
-const themeSelect = document.getElementById("themeSelect");
 const currentTheme = localStorage.getItem("theme") || "default";
-function implement_ThemeSelector() {
-    const themeStylesheetLink = document.getElementById("themeStylesheetLink");
-}
 
 function activateTheme(themeName){
     const light = ["white","black"];
@@ -35,16 +31,7 @@ function setTheme(themeName){
     //text.style.color = "white";
 }
 
-
 activateTheme(currentTheme);
-themeSelect.addEventListener("change", () => {
-    localStorage.setItem("theme", themeSelect.value);
-    activateTheme(themeSelect.value);
-});
-
-themeSelect.value = currentTheme;
-
-implement_ThemeSelector();
 
 // //Det nederste herfra er fra ChatGPT.
 // const backgroundpicker = document.getElementById("backgroundpicker");

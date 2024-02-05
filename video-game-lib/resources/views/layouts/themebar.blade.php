@@ -1,7 +1,7 @@
 <head>
     <meta charset="UTF-8">
     <title>@yield('title')</title>
-{{--    <script type="text/themescript.js" src="{{URL::asset ('themescript.js')}}"></script>--}}
+    <script defer src="{{ asset('themeselector.js')}}"></script>
 </head>
 <body>
 
