@@ -35,14 +35,14 @@ function setTheme(themeName){
     //text.style.color = "white";
 }
 
+
+activateTheme(currentTheme);
 themeSelect.addEventListener("change", () => {
     localStorage.setItem("theme", themeSelect.value);
     activateTheme(themeSelect.value);
 });
 
 themeSelect.value = currentTheme;
-
-activateTheme(currentTheme);
 
 implement_ThemeSelector();
 

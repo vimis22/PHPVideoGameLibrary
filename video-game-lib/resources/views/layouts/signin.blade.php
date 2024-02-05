@@ -22,8 +22,8 @@
 
             <form method="post" action="/account/login">
                 @csrf
-                <input class="themeText" type="text" name="username" placeholder="Username" required>
-                <input class="themeText" type="password" name="password" placeholder="Password" required>
+                <input type="text" name="username" placeholder="Username" required>
+                <input type="password" name="password" placeholder="Password" required>
                 <button class="themeText" type="submit">Login</button>
             </form>
 

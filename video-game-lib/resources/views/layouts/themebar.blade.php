@@ -1,7 +1,7 @@
 <head>
     <meta charset="UTF-8">
     <title>@yield('title')</title>
-    <script type="text/themescript.js" src="{{URL::asset ('js/hideAndView.js')}}"></script>
+{{--    <script type="text/themescript.js" src="{{URL::asset ('themescript.js')}}"></script>--}}
 </head>
 <body>
 
