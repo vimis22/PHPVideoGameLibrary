@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>GAMEX/DB</title>
     @vite(['resources/css/groupstyle.css', 'resources/js/app.js'])
+    <script defer src="{{ asset('themescript.js')}}"></script>
 </head>
 <body>
     <section class="gamebox-placement content_placement">
