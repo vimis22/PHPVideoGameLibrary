@@ -15,6 +15,7 @@ function activateTheme(themeName){
 }
 
 function setTheme(themeName){
+    cookies_write(themeName);
     const text = document.getElementsByClassName("themeText");
     const background = document.getElementsByClassName("themeBack");
     for(let i = 0; i<text.length; i++){
@@ -31,13 +32,6 @@ function setTheme(themeName){
     //text.style.color = "white";
 }
 
-activateTheme(currentTheme);
+//activateTheme(currentTheme);
+cookies_read();
 
-// //Det nederste herfra er fra ChatGPT.
-// const backgroundpicker = document.getElementById("backgroundpicker");
-// const textpicker = document.getElementById("textpicker");
-// colorpicker.addEventListener("input",function(){
-//     activateTheme(backgroundpicker.value);
-//     activateTheme(textpicker.value);
-// });
-//

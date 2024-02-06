@@ -1,6 +1,6 @@
 <div class="container text-center mt-3">
     <div class="col">
-        <a href="{{ route('showIndex') }}" class="themeText text-white text-decoration-none display-3 row"><strong>GAME<i>X</i></strong></a>
+        <a href="{{ route('showIndex') }}" class="themeText text-decoration-none display-3 row"><strong>GAME<i>X</i></strong></a>
         <div class="row">
             <div class="themeText mt-2">
                 @can('admin', App\Models\Game::class)

@@ -11,7 +11,7 @@
         <input type="color" class="colorbox" id="backgroundpicker" value="#ffffff">
         <p class="introduction themeText">Please choose a text color:</p>
         <input type="color" class="colorbox" id="textpicker" value="#000000">
-        <button class="themebutton">Change Theme Color</button>
+        <button id="colorized_button" class="themebutton">Change Theme Color</button>
     </div>
 
     <div class="colorbox_placement">
