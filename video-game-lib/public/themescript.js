@@ -32,6 +32,21 @@ function setTheme(themeName){
     //text.style.color = "white";
 }
 
+function cookies_read(){
+    let color = document.cookie;
+    const colorsplit = color.split(";");
+    const split_background = colorsplit[0].split("=");
+    const split_text = colorsplit[1].split("=");
+    const split_colorpicker = [split_background[1],split_text[1]];
+    setTheme(split_colorpicker);
+}
+
+function cookies_write(themeName){
+    const background_string = "background="+themeName[0]+";";
+    const text_string = "text="+themeName[1];
+    const colorpicker_string = background_string+text_string;
+    document.cookie = colorpicker_string;
+}
 //activateTheme(currentTheme);
 cookies_read();
 
