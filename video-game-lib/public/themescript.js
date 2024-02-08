@@ -1,4 +1,7 @@
-const currentTheme = localStorage.getItem("theme") || "default";
+//I had some thought about using localstorage instead of cookies, but I used cookies because they could be implemented in any browser.
+const currentThemeBack = localStorage.getItem("themeBack") || "default";
+const currentThemeText = localStorage.getItem("themeText") || "default";
+const test = document.getElementById("test");
 
 function activateTheme(themeName){
     const light = ["white","black"];
@@ -33,20 +36,35 @@ function setTheme(themeName){
 }
 
 function cookies_read(){
-    let color = document.cookie;
-    const colorsplit = color.split(";");
-    const split_background = colorsplit[0].split("=");
-    const split_text = colorsplit[1].split("=");
-    const split_colorpicker = [split_background[1],split_text[1]];
-    setTheme(split_colorpicker);
+    test.value = currentThemeBack + " "+ currentThemeText;
+    if(currentThemeBack.length > 0) {
+        const theme = [currentThemeBack,currentThemeText];
+        setTheme(theme);
+    }
+    else activateTheme("light");
+    /*if(document.cookie.startsWith("background")) let color = document.cookie;
+    else let color = "none";*/
+    /*let color = document.cookie;
+    if(color==null){
+        activateTheme("light");
+    }else{
+        const colorsplit = color.split(";");
+        const split_background = colorsplit[0].split("=");
+        const split_text = colorsplit[1].split("=");
+        const split_colorpicker = [split_background[1],split_text[1]];
+        setTheme(split_colorpicker);
+    }*/
 }
 
 function cookies_write(themeName){
-    const background_string = "background="+themeName[0]+";";
+    localStorage.setItem("themeBack", themeName[0]);
+    localStorage.setItem("themeText", themeName[1]);
+    /*const background_string = "background="+themeName[0]+";";
     const text_string = "text="+themeName[1];
     const colorpicker_string = background_string+text_string;
-    document.cookie = colorpicker_string;
+    document.cookie = colorpicker_string;*/
 }
+
 //activateTheme(currentTheme);
 cookies_read();
 
