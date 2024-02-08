@@ -4,12 +4,12 @@
 // This is because our statement is not stable enough to remember the current set language.
 
 <?php
-namespace Code\ressources\language;
+/*namespace Code\ressources\language;
 if( $_GET['language'] == true ){
     $lang = $_GET['language'];
 }else {
     $lang = "en";
-}
+}*/
 ?>
 
 <!DOCTYPE html>
