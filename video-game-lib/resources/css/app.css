@@ -327,3 +327,39 @@ body{
     justify-content: space-evenly;
     place-content: right;
 }
+
+.introduction{
+    justify-content: center;
+    text-align: left;
+    color: white;
+    margin-top: 10px;
+}
+
+.topbar_button_placements{
+    justify-content: space-evenly;
+    flex-direction: row;
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.topbar_buttons{
+    height: 30px;
+}
+
+.colorbox{
+    height: 200px;
+    width: 200px;
+}
+
+.colorbox_placement{
+    margin: auto;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    display: flex;
+    width: 250px;
+}
+
+.themebutton{
+    width: 200px;
+}
