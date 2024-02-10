@@ -36,7 +36,7 @@ function setTheme(themeName){
 }
 
 function cookies_read(){
-    test.value = currentThemeBack + " "+ currentThemeText;
+    test.value = currentThemeBack + " " + currentThemeText;
     if(currentThemeBack.length > 0) {
         const theme = [currentThemeBack,currentThemeText];
         setTheme(theme);

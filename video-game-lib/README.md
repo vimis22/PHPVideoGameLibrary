@@ -1,6 +1,8 @@
 <h1>Video Game Library</h1>
 
+<h5>ADVISORY: Please run the following steps on the main-branch:
 
+Do not use other branches, since they have been used for experiments, regarding code-developement.</h2>
 <p>
 The primary objective of the Video Game Library is to view different types of game-information.
 
