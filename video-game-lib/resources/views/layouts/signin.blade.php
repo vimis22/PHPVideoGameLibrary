@@ -1,8 +1,13 @@
+<head>
+    <meta charset="UTF-8">
+    <title>@yield('title')</title>
+    <script defer src="{{ asset('themeselector.js')}}"></script>
+</head>
 <div class="d-flex align-items-center justify-content-center m-5">
-    <h2 class="text-center text-white m-4">
+    <h2 class="themeText text-center m-4">
         Log in to GAMEX
     </h2>
-    <a class="btn btn-outline-light" id="backButton" href="{{ route('showIndex') }} ">
+    <a class="themeText btn btn-outline-light" id="backButton" href="{{ route('showIndex') }} ">
         Back
     </a>
 </div>
@@ -72,6 +77,7 @@
 
         </div>
     </div>
+
 </section>
 
 

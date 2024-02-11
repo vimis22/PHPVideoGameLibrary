@@ -1,4 +1,4 @@
-import './bootstrap';
+/*import './bootstrap';*/
 
 function changePage(button) {
     button.addEventListener("click", function() {

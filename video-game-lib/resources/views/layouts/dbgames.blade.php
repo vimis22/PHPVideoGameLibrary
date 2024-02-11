@@ -19,6 +19,7 @@
             </a>
         </div>
         @endforeach
+
     </section>
 </body>
 </html>

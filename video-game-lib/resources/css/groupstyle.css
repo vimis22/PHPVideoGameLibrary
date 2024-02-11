@@ -1,6 +1,6 @@
-body{
-    background-color: #212121;
-    color: white;
+/*body{
+    !*background-color: #212121;
+    color: white;*!
 }
 
 .textstyle{
@@ -364,7 +364,7 @@ body{
 .tableinfo{
     justify-content: space-evenly;
     place-content: right;
-}
+}*/
 
 .introduction{
     justify-content: center;
@@ -401,12 +401,10 @@ body{
     width: 200px;
 }
 
-.themeText{
+/*.themeText{
     color: #ffffff;
-    --bs-bg-opacity: 1;
-}
+}*/
 
-.themeBack{
+/*.themeBack{
     background-color: #000000;
-    --bs-bg-opacity: 1;
-}
+}*/

@@ -1,6 +1,6 @@
-body{
-    /*background-color: #212121;*/
-    font-color: white;
+/*body{
+    !*background-color: #212121;
+    font-color: white;*!
 }
 
 .textstyle{
@@ -14,8 +14,8 @@ body{
 }
 
 .menubar{
-    /*background-color: #DDDDDD;*/
-    /*color: white;*/
+    !*background-color: #DDDDDD;*!
+    !*color: white;*!
     height: 75px;
     width: 100%;
     min-width: 720px;
@@ -40,9 +40,9 @@ body{
 }
 
 #searchbar{
-    /*background-color: #e3a1be;*/
+    !*background-color: #e3a1be;*!
     text-weight: bold;
-    /*font-color: black;*/
+    !*font-color: black;*!
     height: 100%;
     width: 75%;
     text-align: center;
@@ -326,7 +326,7 @@ body{
 .tableinfo{
     justify-content: space-evenly;
     place-content: right;
-}
+}*/
 
 .introduction{
     justify-content: center;

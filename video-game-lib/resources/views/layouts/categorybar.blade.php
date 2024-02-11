@@ -25,6 +25,7 @@
             PUZZLE
         </button>
     </div>
+    <input type="hidden" id="test" value="test"></input>
 </nav>
 </body>
 </html>
