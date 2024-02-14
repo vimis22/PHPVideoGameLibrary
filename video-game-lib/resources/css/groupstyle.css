@@ -1,370 +1,127 @@
-/*body{
-    !*background-color: #212121;
-    color: white;*!
+body{
+    font-family: "Arial";
 }
-
-.textstyle{
-    font: Helvetica Neue;
-    font-weight: bold;
-}
-
-.menubar{
-    background-color: #DDDDDD;
-    color: white;
-    height: 75px;
-    width: 100%;
-    min-width: 720px;
-    justify-content: space-evenly;
-}
-
-.logo_placemenet{
-    height: 100%;
-    width: 25%;
-    justify-content: left;
-}
-
-#logo{
-    height: 100%;
-    width: auto;
-    cursor: pointer;
-}
-
-.search_placement{
-    height: 50%;
-    width: 50%;
+.logo_placement{
     justify-content: center;
-}
-
-#searchbar{
-    background-color: #a1b8e3;
-    color: black;
-    height: 100%;
-    width: 75%;
-    text-align: left;
-    font-size: 20px;
-    cursor: pointer;
-    justify-content: space-evenly;
-    border-radius: 25px;
-    padding-left: 15px;
-}
-
-.profile_placement{
-    height: 75%;
-    width: 25%;
-    justify-content: center;
-}
-
-.profile{
-    background-color: lightskyblue;
-    border-style: none;
-    height: 100%;
-    width: 30%;
-    font-weight: bold;
-    justify-content: center;
-    margin-right: 15px;
-    cursor: pointer;
-    border-radius: 25px;
-}
-
-.profile:hover{
-    background-color: royalblue;
-}
-
-.profile:active {
-    transform: scale(0.95);
-    transition: transform 0.2s ease;
-}
-
-.category_placement{
-    margin-top: 30px;
-    justify-content: center;
-}
-
-.category{
-    justify-content: space-evenly;
-}
-
-.widetub_bar{
-    background-color: #FF5722;
-    color: black;
-    height: 55px;
-    width: 75%;
-    border-radius: 20px;
-}
-
-.profile_textbar{
-    justify-content: center;
-}
-
-.loginbutton_left{
-    height: 100%;
-    width: 25%;
-    justify-content: left;
-    margin-left: 7px;
-}
-
-.loginbutton_center{
-    height: 100%;
-    width: 50%;
-    justify-content: center;
-}
-
-.loginbutton_right{
-    height: 100%;
-    width: 25%;
-    justify-content: right;
-    margin-right: 7px;
-}
-
-.category_buttons{
-    background-color: #FF5722;
-    border-style: none;
-    color: whitesmoke;
-    font-weight: bolder;
-    height: 75%;
-    width: 150px;
-    border-radius: 20px;
-}
-
-.category_buttons:hover {
-    background-color: #D84315;
-}
-
-.category_buttons:active {
-    transform: scale(0.95);
-    transition: transform 0.2s ease;
-}
-
-.category_selected {
-    border: 2px solid black;
-    position: relative;
-}
-
-.category_selected::after {
-    content: "";
-    width: 10px;
-    height: 10px;
-    background-color: whitesmoke;
-    border-radius: 50%;
-    position: absolute;
-    top: calc(50% - 0.5px);
-    right: 20px;
-    margin-right: 1px;
-    transform: translateY(-50%);
-}
-
-.gamebox-placement{
-    margin-top: 30px;
-    justify-content: center;
-}
-
-.gamebox{
-    border-style: none;
-    color: white;
-    font-weight: bold;
-    height: 300px;
-    width: 300px;
-}
-
-.gamebox_links{
-    height: inherit;
-    width: inherit;
-}
-
-.game_image{
-    margin-top: 7%;
-    height: 75%;
-    width: 85%;
-}
-
-.game_name_placement{
-    height: 18%;
-    justify-content: center;
-}
-
-.content_placement{
-    text-align: center;
-    align-items: center;
     display: flex;
-    flex-direction: row;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
-.profile_buttons{
-    background-color: lightskyblue;
-    border-style: none;
-    color: black;
-    font-weight: bold;
-    height: 75%;
-    width: 150px;
+.logo_text{
+    font-size: 50px;
 }
 
-.login_name_placement{
-    font-weight: bolder;
-    color: whitesmoke;
-    justify-content: center;
+.current_page_identifier{
+    font-size: 25px;
 }
 
-.login_box{
-    background-color: #DDDDDD;
-    border-style: none;
-    color: black;
-    font-weight: bold;
-    height: 500px;
-    width: 75%;
-}
-
-.login_access{
-    background-color: #a1b8e3;
-    font-weight: bold;
-    color: black;
-    height: 75%;
-    width: 300px;
-    text-align: center;
+.user_text_identifier{
     font-size: 20px;
-    cursor: pointer;
-    justify-content: space-evenly;
-    margin-top: 10px;
-    border-radius: 25px;
+    background-color: #ff4400;
+    font-weight: bold;
 }
 
-.login_label{
-    display: inline-block;
-    text-align: left;
+.page_btn_centering{
+    justify-content: space-evenly;
+    display: flex;
+    margin-top: 10px;
+}
+
+.page_buttons{
+    /*background-color: #0051ff;*/
+    height: 30px;
+    border-radius: 100px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.demarcation_line{
+    border-color: #ab0047;
+    height: 3px;
+    background: #ab0047;
+}
+
+/*Nu laver vi login menuen med box*/
+
+.access_placement{
+    justify-content: center;
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.access_box{
+    margin-top: 10px;
+    background-color: #c7c1c1;
+    flex-direction: column;
+    justify-content: center;
+    width: 1000px;
+    height: 300px;
+    border-radius: 20px;
+}
+
+.inputfield_placement{
+    justify-content: center;
+    flex-direction: column;
+    display: flex;
+    margin-right: 5px;
     margin-left: 5px;
 }
 
-.login_information{
-    height: 50px;
-    width: 300px;
-    justify-content: center;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+.inputfield_elements{
+    border-radius: 50px;
+    height: 20px;
 }
 
-.things_placement{
-    height: 158px;
-    width: 158px;
-    text-align: center;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-}
-
-.logintext_placement1{
-    text-align: center;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 20px;
-}
-
-.logintext_placement2{
-    text-align: center;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    margin-top: 20px;
-}
-
-.login_buttons{
-    background-color: lightskyblue;
-    border-style: none;
-    color: black;
-    font-weight: bold;
-    height: 40px;
-    width: 150px;
-}
-
-.login_label_layout{
-    height: inherit;
-    width: 50%;
-    align-items: center;
-    text-align: center;
-    display: flex;
-}
-
-.login_access_layout{
-    height: inherit;
-    width: 15%;
-    align-items: center;
-    text-align: center;
-    display: flex;
-}
-
-.mainnewscontainer{
-    margin-top: 20px;
-    height: 50px;
-    min-width: 100px;
-    align-items: center;
-    text-align: center;
-    background-color: #DDDDDD;
-    justify-content: center;
-}
-
-.mainnewstitle{
-    font-family: "Helvetica Neue";
-    color: black;
-    font-size: 50px;
-    font-weight: bold;
-}
-
-.newscontainer{
-    margin-top: 20px;
-    height: 300px;
-    min-width: 100px;
-    align-items: left;
-    background-color: #DDDDDD;
-    text-align: left;
-    font-family: "Helvetica Neue";
-    flex-direction: column;
-    display: flex;
-}
-
-.news-content{
-    text-align: left;
-    padding: 20px;
-}
-
-.newsindicator{
-    font-size: 22px;
-    height: 50px;
-    width: 100px;
-    background-color: #FFE600;
-    font-family: "Helvetica Neue";
-    text-align: left;
-}
-
-.newstext{
-    font-size: 18px;
-    font-family: "Helvetica Neue";
-    font-weight: bold;
-    text-align: left;
-}
-
-.gameinfobox_placement{
-    margin-top: 30px;
-    justify-content: space-evenly;
-}
-
-.content_placement1{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-
-.game_wallpaper{
+.inputfield_height{
     margin-top: 10px;
-    margin-left: 10px;
-    height: 400px;
-    width: 300px;
-    justify-content: left;
+    margin-bottom: 10px;
+    height: 100px;
 }
 
-.tableinfo{
-    justify-content: space-evenly;
-    place-content: right;
-}*/
+.access_buttons{
+    /*background-color: #84ffb4;*/
+    height: 25px;
+    border-radius: 100px;
+}
+
+.logout_button{
+    /*background-color: #ff488e;*/
+    height: 30px;
+    border-radius: 100px;
+}
+
+.category_button{
+    /*background-color: #c6a1ff;*/
+    height: 30px;
+    border-radius: 100px;
+}
+
+.colorpicker_text_identifier{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.colorbox{
+    height: 200px;
+    width: 200px;
+}
+
+.colorbox_placement{
+    margin: auto;
+    text-align: center;
+    justify-content: center;
+}
+
+.table_design{
+    width: 50%;
+}
+
+.general_margin{
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
 
 .introduction{
     justify-content: center;
