@@ -7,9 +7,13 @@
         <h1 class="themeText display-3">Categories</h1>
     </div>
     <div class="logo_placement">
-        <a class="themeText btn btn-outline-light mt-3 mb-3" href="{{ route('admin.addCategory') }}">Add New Category</a>
+        <div>
+            <a class="themeText btn btn-outline-light mt-3 mb-3" href="{{ route('admin.addCategory') }}">Add New Category</a>
+        </div>
+    </div>
+    <div class="logo_placement themeText">
         @foreach ($categories as $category)
-            <h3>{{ $category->name }}</h3>
+            <h3 class="page_buttons">{{ $category->name }}</h3>
         @endforeach
     </div>
 </div>

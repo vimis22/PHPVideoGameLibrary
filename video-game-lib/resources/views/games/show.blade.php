@@ -1,9 +1,17 @@
 @extends('layouts.master')
 @include('layouts.topbar')
 <hr class="text-white mx-3 my-4">
-<div class="logo_placement text-center">
-    <h1 class="text-white">{{ $game->name }}</h1>
-    <p class="text-white">{{ $game->description }}</p>
-    <p class="text-white">Publishing date: {{ $game->publishing_date }}</p>
-    <p class="text-white">Category: {{ $game->category }}</p>
+<div class="text-center">
+    <div class="logo_placement">
+        <h1 class="themeText">{{ $game->name }}</h1>
+    </div>
+    <div class="logo_placement">
+        <p class="themeText">{{ $game->description }}</p>
+    </div>
+    <div class="logo_placement">
+        <p class="themeText">Publishing date: {{ $game->publishing_date }}</p>
+    </div>
+    <div class="logo_placement">
+        <p class="themeText">Category: {{ $game->category }}</p>
+    </div>
 </div>

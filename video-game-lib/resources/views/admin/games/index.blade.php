@@ -4,11 +4,11 @@
 <hr class="themeText mx-3 my-4">
 <div class="container text-center themeText">
     <h1 class="logo_placement themeText display-3">Edit Games and Categories</h1>
-    <div class="logo_placement page_btn_centering">
-        <div>
-            <a class="btn btn-dark themeText border-light col" href="{{ route('admin.showCategories') }}">Manage Categories</a>
-            <a class="btn btn-dark themeText border-light col"  href="{{ route('admin.addGame') }}">Add New Game</a>
-        </div>
+    <div class="logo_placement">
+        <a class="btn btn-dark themeText border-light col" href="{{ route('admin.showCategories') }}">Manage Categories</a>
+    </div>
+    <div class="logo_placement">
+        <a class="btn btn-dark themeText border-light col"  href="{{ route('admin.addGame') }}">Add New Game</a>
     </div>
 
     <br><br>

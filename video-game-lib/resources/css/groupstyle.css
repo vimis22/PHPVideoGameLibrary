@@ -18,7 +18,7 @@ body{
 
 .user_text_identifier{
     font-size: 20px;
-    background-color: #ff4400;
+    /*background-color: #ff4400;*/
     font-weight: bold;
 }
 
@@ -57,7 +57,7 @@ body{
     flex-direction: column;
     justify-content: center;
     width: 1000px;
-    height: 300px;
+    height: 400px;
     border-radius: 20px;
 }
 
@@ -143,6 +143,7 @@ body{
 .colorbox{
     height: 200px;
     width: 200px;
+    border-radius: 10px;
 }
 
 .colorbox_placement{
@@ -157,6 +158,27 @@ body{
 .themebutton{
     width: 200px;
 }
+
+/*.invalid_credentials{
+    text-align: center;
+    background-color: darkred;
+    width: 150px;
+    border-radius: 10px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    display: flex;
+}
+
+.correct_credentials{
+    text-align: center;
+    background: darkgreen;
+    width: 200px;
+    border-radius: 10px;
+    justify-content: center;
+    flex-direction: column;
+    display: flex;
+}*/
 
 /*.themeText{
     color: #ffffff;

@@ -20,7 +20,7 @@
     <div class="access_box category_placement content_placement textstyle">
         <div class="search_placement login_box content_placement textstyle">
             <div class="inputfield_placement logintext_placement1 textstyle">
-                <p class="themeText">
+                <p class="logo_placement">
                     Please enter your Login Information here.
                 </p>
 
@@ -36,30 +36,30 @@
                     @csrf
                     <button class="access_buttons" type="submit">Logout</button>
                 </form>
-                <p class="logo_placement themeText">You are now Logged In</p>
+                <p class="logo_placement">You are now Logged In</p>
             @else
-                <p class="themeText">Logged out</p>
+                <p class="logo_placement">Logged out</p>
             @endif
 
             @if ($errors->has('login'))
-                <div class="alert alert-danger">
-                    {{ $errors->first('login') }}
+                <div class="logo_placement alert alert-danger">
+                    <p style="background: darkred; color: white;">{{ $errors->first('login') }}</p>
                 </div>
             @endif
 
 
             @if(auth()->check())
                 @if(session('success'))
-                    <div class="alert alert-success">
+                    <div class="logo_placement alert alert-success">
                         {{ session('success') }}
                     </div>
                 @endif
 
                 @if ($errors->any())
-                    <div class="alert alert-danger">
+                    <div class="logo_placement alert alert-danger">
                         <ul>
                             @foreach ($errors->all() as $error)
-                                <li>{{ $error }}</li>
+                                <p style="margin-right: 40px; background: darkred; color: white;">{{ $error }}</p>
                             @endforeach
                         </ul>
                     </div>

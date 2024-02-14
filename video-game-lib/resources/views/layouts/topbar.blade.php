@@ -4,11 +4,11 @@
             <a href="{{ route('showIndex') }}" class="logo_text themeText text-decoration-none display-3 row"><strong>GAME<i>X</i></strong></a>
         </div>
         <div class="row">
-            <div class="logo_placement themeText mt-2">
+            <div class="logo_placement mt-2">
                 @can('admin', App\Models\Game::class)
-                    <p class="user_text_identifier themeText">You are currently logged in as admin.</p>
+                    <p class="user_text_identifier themeText">You're logged in as Administrator</p>
                 @else
-                    <p class="user_text_identifier themeText">You are currently logged out and browsing as a guest.</p>
+                    <p class="user_text_identifier themeBack">You're logged in as Guest'</p>
                 @endcan
             </div>
 
