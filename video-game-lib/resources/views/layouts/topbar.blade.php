@@ -13,16 +13,22 @@
             </div>
 
             <div class="page_btn_centering">
-                <a href="{{ route('showAccount') }}" class="page_buttons themeText themeBack themeText btn btn-outline-light" type="button">
-                    ACCOUNT
-                </a>
-                <a href="{{ route('showTheme') }}" class="page_buttons themeText themeBack themeText btn btn-outline-light" type="button">
-                    THEME
-                </a>
-                @can('admin', App\Models\Game::class)
-                    <a class="page_buttons themeText themeBack btn btn-outline-light" href={{ route('admin.showGames') }} type="button">
-                    EDIT GAMES AND CATEGORIES
+                <button class="page_buttons themeBack">
+                    <a href="{{ route('showAccount') }}" class="themeText btn btn-outline-light" type="button">
+                        ACCOUNT
                     </a>
+                </button>
+                <button class="page_buttons themeBack">
+                    <a href="{{ route('showTheme') }}" class="themeText btn btn-outline-light" type="button">
+                        THEME
+                    </a>
+                </button>
+                @can('admin', App\Models\Game::class)
+                    <button class="page_buttons themeBack">
+                        <a class="themeText btn btn-outline-light" href={{ route('admin.showGames') }} type="button">
+                            EDIT GAMES AND CATEGORIES
+                        </a>
+                    </button>
                 @endcan
             </div>
         </div>
