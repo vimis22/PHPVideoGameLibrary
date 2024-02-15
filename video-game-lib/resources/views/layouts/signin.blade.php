@@ -11,7 +11,7 @@
     </div>
     <div class="logo_placement">
         <a class="themeText btn btn-outline-light" id="backButton" href="{{ route('showIndex') }} ">
-            Back
+            Back to Main Page
         </a>
     </div>
 </div>

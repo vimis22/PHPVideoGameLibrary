@@ -14,6 +14,11 @@
 
             <div class="page_btn_centering">
                 <button class="page_buttons themeBack">
+                    <a class="themeText btn btn-outline-light" id="backButton" href="{{ route('showIndex') }} ">
+                        MAIN PAGE
+                    </a>
+                </button>
+                <button class="page_buttons themeBack">
                     <a href="{{ route('showAccount') }}" class="themeText btn btn-outline-light" type="button">
                         ACCOUNT
                     </a>
