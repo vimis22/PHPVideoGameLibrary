@@ -10,9 +10,11 @@
         </h2>
     </div>
     <div class="logo_placement">
-        <a class="themeText btn btn-outline-light" id="backButton" href="{{ route('showIndex') }} ">
-            Back to Main Page
-        </a>
+        <button class="access_buttons">
+            <a class="btn btn-outline-light" id="backButton" href="{{ route('showIndex') }} ">
+                Back to Main Page
+            </a>
+        </button>
     </div>
 </div>
 

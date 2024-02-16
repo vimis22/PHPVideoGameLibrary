@@ -8,7 +8,9 @@
     </div>
     <div class="logo_placement">
         <div>
-            <a class="themeText btn btn-outline-light mt-3 mb-3" href="{{ route('admin.addCategory') }}">Add New Category</a>
+            <button class="inputfield_elements">
+                <a class="btn btn-outline-light mt-3 mb-3" href="{{ route('admin.addCategory') }}">Add New Category</a>
+            </button>
         </div>
     </div>
     <div class="logo_placement themeText">
