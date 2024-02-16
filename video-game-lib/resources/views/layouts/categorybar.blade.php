@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>@yield('title')</title>
     @vite(['resources/css/groupstyle.css', 'resources/js/app.js'])
-    <script defer src="{{ asset('themescript.js')}}"></script>
+
 </head>
 <body>
 <nav class="category_placement content_placement">
@@ -25,6 +25,7 @@
             PUZZLE
         </button>
     </div>
+    <input type="hidden" id="test" value="test"></input>
 </nav>
 </body>
 </html>

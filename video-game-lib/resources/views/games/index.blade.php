@@ -1,26 +1,32 @@
 @extends('layouts.master')
 
 <div class="container text-center">
-    <h1 class="text-white display-3">Browse Games</h1>
+    <div class="logo_placement">
+        <h1 class="themeText display-3">Browse Games</h1>
+    </div>
 
-    <div class="row">
+    <div class="logo_placement row">
         @foreach ($categories as $category)
             <div class="col">
-                <a class="btn btn-dark text-white border-light" href="#{{ $category }}">{{ $category }}</a>
+                <a class="btn btn-dark themeText border-light" href="#{{ $category }}">{{ $category }}</a>
             </div>
         @endforeach
     </div>
 
     @foreach ($categories as $category)
-        <section id="{{ $category }}" class="mt-5">
-            <h2 class="text-white text-decoration-none">Category: {{ $category }}</h2>
-            <ul class="list-unstyled text-decoration-none">
-                @forelse ($gamesByCategory[$category] as $game)
-                    <li class="text-white"><a class="btn btn-dark text-white border-light m-1" href="{{ route('showGame', $game->id) }}">{{ $game->name }}</a></li>
-                @empty
-                    <li class="text-white">No games available in this category.</li>
-                @endforelse
-            </ul>
-        </section>
+        <div id="{{ $category }}" class="mt-5">
+            <div class="logo_placement">
+                <h2 class="themeText text-decoration-none">Category: {{ $category }}</h2>
+            </div>
+            <div class="logo_placement">
+                <ul class="list-unstyled text-decoration-none">
+                    @forelse ($gamesByCategory[$category] as $game)
+                        <li class="themeText"><a class="btn btn-dark themeText border-light m-1" href="{{ route('showGame', $game->id) }}">{{ $game->name }}</a></li>
+                    @empty
+                        <li class="themeText">No games available in this category.</li>
+                    @endforelse
+                </ul>
+            </div>
+        </div>
     @endforeach
 </div>
