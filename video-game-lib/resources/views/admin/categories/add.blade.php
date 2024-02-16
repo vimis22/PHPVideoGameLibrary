@@ -9,7 +9,7 @@
     <div>
         <form action="{{ route('admin.addCategory') }}" method="post" class="logo_placement">
             @csrf
-            <div>
+            <div class="themeText">
                 <label for="name">Name:</label>
                 <input class="inputfield_elements" type="text" name="name" required>
                 <button type="submit" class="access_buttons btn btn-outline-light">Add Category</button>
