@@ -1,5 +1,3 @@
-# PHPVideoGameLibrary
-
 <h1>Video Game Library</h1>
 
 <h5>ADVISORY: Please run the following steps on the main-branch:
