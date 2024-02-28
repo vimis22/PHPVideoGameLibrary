@@ -13,7 +13,7 @@ themeSelect.addEventListener("change", () => {
 //EXPERIMENTAL DEVELOPMENT OF COOKIES:
 //themeSelect.value = currentTheme;
 
-//colorzied_buttonNow will created an actionevent for the colorpicker submit button in the themebar page.
+//colorzied_buttonNow will create an actionevent for the colorpicker submit button in the themebar page.
 colorized_button.addEventListener("click", () => {
     const colorpicker = [backgroundpicker.value,textpicker.value];
     setTheme(colorpicker);
