@@ -1,3 +1,4 @@
+{{--This page is where my 40% is selected, and implemented on each page, throug layouts.master.--}}
 <head>
     <meta charset="UTF-8">
     <title>@yield('title')</title>
