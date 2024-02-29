@@ -8,7 +8,7 @@
                 @can('admin', App\Models\Game::class)
                     <p class="user_text_identifier themeText">You're logged in as Administrator</p>
                 @else
-                    <p class="user_text_identifier themeBack">You're logged in as Guest'</p>
+                    <p class="user_text_identifier themeText">You're logged in as Guest</p>
                 @endcan
             </div>
 

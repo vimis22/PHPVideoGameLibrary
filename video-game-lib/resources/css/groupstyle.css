@@ -1,6 +1,13 @@
+/*This CSS-File has been changed for the 60% of the Exam. It has been refreshed with updation of new elements.*/
+/*PLEASE remember to look at the views/layouter directory, since the changes have been implemented there in terms of 60% and 40%.
+ You will find the necessary files there.*/
+
+/*The body id has been used to define a common font-family for all the pages.*/
 body{
     font-family: "Arial";
 }
+
+/*The logo_placement has been used for placing the WEB-Logo in the center.*/
 .logo_placement{
     justify-content: center;
     display: flex;
@@ -8,26 +15,32 @@ body{
     margin-bottom: 5px;
 }
 
+/*This element has been used to make sure, that the logo has a big size, so that it is visible.*/
 .logo_text{
     font-size: 50px;
 }
 
+/*The current_page_identifier has been used to highlight, the page the user is currently located at.
+EXAMPLE: Account Page as title or Edit Games Page as title.*/
 .current_page_identifier{
     font-size: 25px;
 }
 
+/*The user_text_identifier has been used to tell whether the user is logged in as guest or admin.*/
 .user_text_identifier{
     font-size: 20px;
     /*background-color: #ff4400;*/
     font-weight: bold;
 }
 
+/*This class has the same role as logo_placement, though it is used for page_bottoms at the navbar but also other areas.*/
 .page_btn_centering{
     justify-content: space-evenly;
     display: flex;
     margin-top: 10px;
 }
 
+/*The page_buttons class is used for styling the navbar buttons in a circular and userfriendly way.*/
 .page_buttons{
     /*background-color: #0051ff;*/
     height: 30px;
@@ -36,14 +49,16 @@ body{
     margin-right: 10px;
 }
 
+/*The demarcation_line has been used for creating a line between the navbar and section area.*/
 .demarcation_line{
     border-color: #ab0047;
     height: 3px;
     background: #ab0047;
 }
 
-/*Nu laver vi login menuen med box*/
+/*Now begins the login part of the CSS.*/
 
+/*The access_placement class has the same role as page_btn_centering and logo_placement. Where it centers the grey box in the login-page.*/
 .access_placement{
     justify-content: center;
     display: flex;
@@ -51,6 +66,7 @@ body{
     margin-bottom: 10px;
 }
 
+/*The access_box styles the login_box with a grey color, along with styling the border with circular-format.*/
 .access_box{
     margin-top: 10px;
     background-color: #c7c1c1;
@@ -61,6 +77,7 @@ body{
     border-radius: 20px;
 }
 
+/*The inputfield_placement has the same role as the access_placement, though this time it is dedicated to the content inside the access_placement box.*/
 .inputfield_placement{
     justify-content: center;
     flex-direction: column;
@@ -69,66 +86,77 @@ body{
     margin-left: 5px;
 }
 
+/*The inputfield_elements class styles the inputfields inside the access_box, so that they are circular and small in height.*/
 .inputfield_elements{
     border-radius: 50px;
     height: 20px;
 }
 
+/*The inputfield_height has the same purpose as the inputfield_elements class, but is not used that much.*/
 .inputfield_height{
     margin-top: 10px;
     margin-bottom: 10px;
     height: 100px;
 }
 
+/*The access_buttons are dedicated to the buttons inside the grey box in account-page. It styles the login and logout buttons.*/
 .access_buttons{
     /*background-color: #84ffb4;*/
     height: 25px;
     border-radius: 100px;
 }
 
+/*The logout_button has the same purpose as the access_buttons, but is not that often used.*/
 .logout_button{
     /*background-color: #ff488e;*/
     height: 30px;
     border-radius: 100px;
 }
 
+/*The category_button is used inside the edit games_and categories page.*/
 .category_button{
     /*background-color: #c6a1ff;*/
     height: 30px;
     border-radius: 100px;
 }
 
+/*The colorpicker_text_identifier defines a height for the text, standing above the colorpickers. (But it is not that much used.)
+EXAMPLE: Please choose a background and text color.*/
 .colorpicker_text_identifier{
     font-size: 20px;
     font-weight: bold;
 }
 
-.colorbox{
-    height: 200px;
-    width: 200px;
-}
-
+/*The colorbox_placement class has the same purpose as access_placement, where it places the colorboxes in the center.*/
 .colorbox_placement{
     margin: auto;
     text-align: center;
     justify-content: center;
 }
 
+/*The table_design was experimental, but has been used for adding extra width for areas in need.*/
 .table_design{
     width: 50%;
 }
 
+/*The general_margin is mostly used in the cases of invalid_login. But this is also not used that much.*/
 .general_margin{
     margin-bottom: 10px;
     margin-top: 10px;
 }
 
+/*The introduction class has been mostly used instead of colorpicker_text_identifier to define the height of the text standing at the themebar page
+ for the colorpicker. EXAMPLE: Please choose a background and text color.*/
 .introduction{
     justify-content: center;
     text-align: left;
     margin-top: 10px;
 }
 
+/*The topbar_button_placements has been used to create gap between the buttons in the topbar or navbar.
+It has also helped in creating gap between the section area and the buttons of topbar.
+
+PLEASE REMIND: When I mention topbar and navbar, then I refer to the same area and thing.*/
 .topbar_button_placements{
     justify-content: space-evenly;
     flex-direction: row;
@@ -136,16 +164,19 @@ body{
     margin-bottom: 10px;
 }
 
+/*The topbar_buttons have got a height defined for their pages.*/
 .topbar_buttons{
     height: 30px;
 }
 
+/*The colorbox styles the colorpicker in terms of height and width.*/
 .colorbox{
     height: 200px;
     width: 200px;
     border-radius: 10px;
 }
 
+/*The colorbox_placement class has the same purpose as access_placement, where it places the colorboxes in the center.*/
 .colorbox_placement{
     margin: auto;
     text-align: center;
@@ -155,6 +186,7 @@ body{
     width: 250px;
 }
 
+/*The themebutton defines a width for the button standing beneath the colorpickers, in terms of implementing the color.*/
 .themebutton{
     width: 200px;
 }
